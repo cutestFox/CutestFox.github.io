@@ -460,7 +460,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第一章JAVA入门"><a href="#第一章JAVA入门" class="headerlink" title="第一章JAVA入门"></a>第一章JAVA入门</h2><h3 id="1-1JAVA语言"><a href="#1-1JAVA语言" class="headerlink" title="1.1JAVA语言"></a>1.1JAVA语言</h3><p>一种面向对象的语言 </p>
+                <h2 id="JAVA入门"><a href="#JAVA入门" class="headerlink" title="JAVA入门"></a>JAVA入门</h2><h3 id="1-1JAVA语言"><a href="#1-1JAVA语言" class="headerlink" title="1.1JAVA语言"></a>1.1JAVA语言</h3><p>一种面向对象的语言 </p>
 <p>一种平台无关的语言，必须程序运行的解释环境 </p>
 <p>一种健壮的语言，吸收了C/C++语言的优点，但是去掉了影响程序健壮性的部分，例如指针、内存 的申请与释放等 </p>
 <h4 id="1-1-2JAVA的核心优势。"><a href="#1-1-2JAVA的核心优势。" class="headerlink" title="1.1.2JAVA的核心优势。"></a>1.1.2JAVA的核心优势。</h4><p>java语言以牺牲执行效率为代价换取高安全性</p>
@@ -475,17 +475,26 @@
 <p>java的文件名和类名称一致</p>
 <h4 id="1-2-3最常用DOS命令"><a href="#1-2-3最常用DOS命令" class="headerlink" title="1.2.3最常用DOS命令"></a>1.2.3最常用DOS命令</h4><p>DOS 命令已经基本退出普通使用者的历史舞台了，但是我们仍然有必要掌握几个常用的命<br>令，便于在某些情况下更顺畅的操作程序，在Java中严格区分大小写，也就是说在进行操作的时候必须输入正确的文件名，但是在windo10系统下则是对应该字母即可。</p>
 <ol>
-<li>cd   目录路径   进入一个目录</li>
-<li>cd ..          进入父目录</li>
-<li>dir            查看本目录下的文件和子目录列表</li>
-<li>cls            清除屏幕命令</li>
-<li>上下键          查找敲过的命令</li>
-<li>Tab 键         自动补齐命令</li>
+<li><p>cd   目录路径   进入一个目录</p>
+</li>
+<li><p>cd ..          进入父目录</p>
+</li>
+<li><p>dir            查看本目录下的文件和子目录列表</p>
+</li>
+<li><p>cls            清除屏幕命令</p>
+</li>
+<li><p>上下键          查找敲过的命令</p>
+</li>
+<li><p>Tab 键         自动补齐命令</p>
+</li>
 </ol>
-<h3 id="1-2-4java语法基础"><a href="#1-2-4java语法基础" class="headerlink" title="1.2.4java语法基础###"></a>1.2.4java语法基础###</h3><p>Java是一种自由格式的语言，可以用任意个空格、制表符、换行符隔 开每个词 </p>
+<h3 id="1-2-4java语法基础"><a href="#1-2-4java语法基础" class="headerlink" title="1.2.4java语法基础"></a>1.2.4java语法基础</h3><p>Java是一种自由格式的语言，可以用任意个空格、制表符、换行符隔 开每个词 </p>
 <p>每段代码以”;“结束</p>
 <p>​                                                            2020年10月30日</p>
-<h2 id="第二章变量和标识符"><a href="#第二章变量和标识符" class="headerlink" title="第二章变量和标识符##"></a>第二章变量和标识符##</h2><h3 id="2-1注释"><a href="#2-1注释" class="headerlink" title="2.1注释"></a>2.1注释</h3><p>在 Java 中根据注释的功能不同，主要分为单行注释、多行注释和文档注释。<br> 单行注释<br>单行注释使用“//”开头，“//”后面的单行内容均为注释。<br> 多行注释<br>多行注释以“/<em>”开头以“</em>/”结尾，在“/<em>”和“</em>/”之间的内容为注释，我们也可以<br>使用多行注释作为行内注释。但是在使用时要注意，多行注释不能嵌套使用。<br> 文档注释<br>文档注释以“/*<em>”开头以“</em>/”结尾</p>
+<hr>
+<p>##变量和标识符</p>
+<h3 id="2-1注释"><a href="#2-1注释" class="headerlink" title="2.1注释"></a>2.1注释</h3><p>在 Java 中根据注释的功能不同，主要分为单行注释、多行注释和文档注释。<br> 单行注释<br>单行注释使用“//”开头，“//”后面的单行内容均为注释。<br> 多行注释<br>多行注释以“/<em>”开头以“</em>/”结尾，在“/<em>”和“</em>/”之间的内容为注释，我们也可以<br>使用多行注释作为行内注释。但是在使用时要注意，多行注释不能嵌套使用。<br> 文档注释<br>文档注释以“/*<em>”开头以“</em>/”结尾</p>
+<p>注释在代码编译时会自 动被编译器所忽略 </p>
 <h3 id="2-2标识符"><a href="#2-2标识符" class="headerlink" title="2.2标识符"></a>2.2标识符</h3><p>标识符可从一个字母(Unicode编码字符集（65536)、下划线_或美元符号$开始，随后也可跟数字、字母、下划线 或美元符号。 </p>
 <p>标识符是用来给变量、类、方法以及包进行命名。标识符需要遵守一定的规则：</p>
 <p>标识符是区分大小写，没有长度限制，可以为标识符取任意长度的名字 </p>
@@ -494,49 +503,206 @@
 <p>【示例 2-2】合法的标识符<br>int a = 3;<br>int _123 = 3;<br>int $12aa = 3;<br>int 变量1 = 55; //不建议使用中文命名的标识符<br>【示例 2-3】不合法的标识符<br>int 1a = 3; //不能用数字开头<br>int a# = 3; //不能包含#这样的特殊字符<br>int int = 3; //不能使用关键字</p>
 <h3 id="2-3JAVA中的关键字-保留字"><a href="#2-3JAVA中的关键字-保留字" class="headerlink" title="2.3JAVA中的关键字/保留字"></a>2.3JAVA中的关键字/保留字</h3><p>abstract  assert  boolean  break  byte        case<br>catch     char    class    const  continue    default<br>do        double  else     extends final      finally<br>float     for     goto     if      implements import<br>instanceof int   interface long    native     new<br>null      package private protected public    return<br>short     static strictfp super    switch     synchronized<br>this      throw  throws   transient try       void<br>volatile  while</p>
 <h3 id="2-4变量"><a href="#2-4变量" class="headerlink" title="2.4变量"></a>2.4变量</h3><p>变量是Java程序中的基本存储单元，它的定义包括变量名、变量类型和作用域几个部分 ，变量本质上就是代表一个”可操作的存储空间”，空间位置是确定的，但是里面放置什么 值不确定。我们可通过变量名来访问“对应的存储空间”，从而操纵这个“存储空间”存储的值。 变量作为程序中最基本的存储单元，其要素包括变量名，变量类型和作用域。变量在使 用前必须对其声明, 只有在变量声明以后，才能为其分配相应长度的存储空间。 也就是说在使用变量时必须先赋值在使用，即先声明后使用！！</p>
+<p>Java是完全面向对象的，但简单数据类型却不是，它们类似于其他大多数非面向对象语言中的简单数据 类型。这样做的原因是出于效率方面的考虑。在面向对象中引入简单数据类型不会对执行效率产生太多的影响</p>
+<p>Java是以执行效率为代价换取高安全</p>
 <h3 id="2-5常量"><a href="#2-5常量" class="headerlink" title="2.5常量"></a>2.5常量</h3><p>常量通常指的是一个固定的值，例如：1、2、3、’a’、’b’、true、false、”helloWorld”等。</p>
 <p>在 Java 语言中，主要是利用关键字 final 来定义一个常量。 常量一旦被初始化后不能<br>再更改其值。 声明格式为：<br>final type varName = value</p>
 <h3 id="2-6基本数据类型"><a href="#2-6基本数据类型" class="headerlink" title="2.6基本数据类型"></a>2.6基本数据类型</h3><p>Java 是一种强类型语言，每个变量都必须声明其数据类型。 Java 的数据类型可分为两</p>
 <p>大类：基本数据类型（primitive data type）和引用数据类型（reference data type）。<br>Java 中定义了 3 类 8 种基本数据类型<br> 数值型－ byte、 short、int、 long、float、 double<br> 字符型－ char<br> 布尔型－boolean</p>
-<h4 id="2-61整型"><a href="#2-61整型" class="headerlink" title="2.61整型"></a>2.61整型</h4><p>整型用于表示没有小数部分的数值，它允许是负数。整型的范围与运行 Java 代码的机</p>
-<p>器无关，这正是 Java 程序具有很强移植能力的原因之一<br>类型   占用存储空间 表数范围<br>byte  1 字节    （-128<del>127）<br>short 2 字节   （-32768</del>32767）<br>int   4 字节   (-2147483648<del>2147483647) 约 21 亿<br>long  8 字节  (-9223372036854775808</del>9223372036854775807)</p>
-<h4 id="2-62浮点型"><a href="#2-62浮点型" class="headerlink" title="2.62浮点型"></a>2.62浮点型</h4><p>带小数的数据在 Java 中称为浮点型。浮点型可分为 float 类型和 double 类型。</p>
+<h4 id="2-6-1整型"><a href="#2-6-1整型" class="headerlink" title="2.6.1整型"></a>2.6.1整型</h4><p>整型用于表示没有小数部分的数值，它允许是负数。整型的范围与运行 Java 代码的机</p>
+<p>器无关，这正是 Java 程序具有很强移植能力的原因之一<br>类型   占用存储空间 表数范围<br>byte  1 字节    （-128~127）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> k=(<span class="keyword">byte</span>)<span class="number">3000</span>;   <span class="comment">//如果不进行数据类型转换，则IDE工具会报错。但是将大范围数据强转[窄化操作]为小类型变量会有精度损失</span></span><br></pre></td></tr></table></figure>
+
+<p>short 2 字节   （-32768<del>32767）<br>int   4 字节   (-2147483648</del>2147483647) 约 21 亿<br>long  8 字节  (-9223372036854775808~9223372036854775807)</p>
+<h4 id="2-6-2浮点型"><a href="#2-6-2浮点型" class="headerlink" title="2.6.2浮点型"></a>2.6.2浮点型</h4><p>带小数的数据在 Java 中称为浮点型。浮点型可分为 float 类型和 double 类型。</p>
 <p>类型   占用存储空间  表数范围<br>float  4 字节      -3.403E38<del>3.403E38<br>double 8 字节     -1.798E308</del>1.798E308</p>
 <p>float类型的数值有一个后缀F或者f ，没有后缀F/f的浮点数值默认为double类型。也可<br>以在浮点数值后添加后缀D或者d， 以明确其为double类型。</p>
-<h4 id="2-63字符型"><a href="#2-63字符型" class="headerlink" title="2.63字符型"></a>2.63字符型</h4><p>字符型在内存中占 2 个字节，在 Java 中使用单引号来表示字符常量。例如’A’是一个字</p>
-<p>符，它与”A”是不同的，”A”表示含有一个字符的字符串。<br>char 类型用来表示在 Unicode 编码表中的字符。Unicode 编码被设计用来处理各种语<br>言的文字，它占 2 个字节，可允许有 65536 个字符。</p>
-<h4 id="2-64boolean型"><a href="#2-64boolean型" class="headerlink" title="2.64boolean型"></a>2.64boolean型</h4><p>boolean 类型有两个常量值，true 和 false，在内存中占一位（不是一个字节），不可以</p>
+<p>！！！！浮点数无法精确存放</p>
+<h4 id="2-6-3字符型"><a href="#2-6-3字符型" class="headerlink" title="2.6.3字符型"></a>2.6.3字符型</h4><p>字符型在内存中占 2 个字节，在 Java 中使用单引号来表示字符常量。例如’A’是一个字</p>
+<p>符，它与”A”是不同的，”A”表示含有一个字符的字符串。<br>char 类型用来表示在 Unicode 编码表中的字符。Unicode 编码被设计用来处理各种语<br>言的文字，它占 2 个字节，可允许有 65536 个字符。可以充当整形数进行计算</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">/字符类型的变量可以当作整数使用</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;a&#x27;</span>; <span class="comment">//注意：这里使用的是单引号，不是双引号，单引号中只能包含一个字符</span></span><br><span class="line"></span><br><span class="line">需要记忆：</span><br><span class="line"><span class="string">&#x27;0&#x27;</span> &lt; <span class="string">&#x27;A&#x27;</span> &lt;<span class="string">&#x27;a&#x27;</span></span><br><span class="line"></span><br><span class="line">查询对应字符的整形值</span><br><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;中&#x27;</span>;</span><br><span class="line">System.out.println((<span class="keyword">int</span>)c);</span><br><span class="line"></span><br><span class="line">Java也提供转义字符，以反斜杠（\）开头，将其后的字符转变为另外的含义</span><br><span class="line">\ddd	<span class="number">1</span>到<span class="number">3</span>位<span class="number">8</span>进制数所表示的字符(ddd)  例如<span class="string">&#x27;\110&#x27;</span>实际就是字符H</span><br><span class="line">	<span class="keyword">char</span> c=<span class="string">&#x27;\129&#x27;</span>; <span class="comment">// 注意这里是8进制数，报错原因是9超出范围</span></span><br><span class="line">\uxxxx	<span class="number">1</span>到<span class="number">4</span>位<span class="number">16</span>进制数所表示的字符(xxxx)，例如<span class="string">&#x27;\u9110&#x27;</span>表示字符<span class="string">&#x27;鄐&#x27;</span></span><br><span class="line">\’		单引号字符,例如<span class="string">&#x27;\&#x27;&#x27;</span></span><br><span class="line">\<span class="string">&quot;		双引号字符,例如&#x27;&quot;</span><span class="string">&#x27;实际上是可以的，但是这样写可读性非常差，所以建议使用&#x27;</span>\<span class="string">&quot;&#x27;</span></span><br><span class="line"><span class="string">\\		反斜杠字符</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-6-4boolean型"><a href="#2-6-4boolean型" class="headerlink" title="2.6.4boolean型"></a>2.6.4boolean型</h4><p>boolean 类型有两个常量值，true 和 false，在内存中占一位（不是一个字节），不可以</p>
 <p>使用 0 或非 0 的整数替代 true 和 false ，这点和 C 语言不同。 boolean 类型用来判断逻<br>辑条件，一般用于程序流程控制 。</p>
-<h3 id="2-7运算符"><a href="#2-7运算符" class="headerlink" title="2.7运算符"></a>2.7运算符</h3><h4 id="2-71算数运算符"><a href="#2-71算数运算符" class="headerlink" title="2.71算数运算符"></a>2.71算数运算符</h4><p>算术运算符中+，-，*，/，%属于二元运算符，二元运算符指的是需要两个操作数才能</p>
+<h3 id="2-7运算符"><a href="#2-7运算符" class="headerlink" title="2.7运算符"></a>2.7运算符</h3><h4 id="2-7-1算数运算符"><a href="#2-7-1算数运算符" class="headerlink" title="2.7.1算数运算符"></a>2.7.1算数运算符</h4><p>算术运算符中+，-，*，/，%属于二元运算符，二元运算符指的是需要两个操作数才能</p>
 <p>完成运算的运算符。其中的%是取模运算符，就是我们常说的求余数操作。<br>二元运算符的运算规则：<br>整数运算：<br> 如果两个操作数有一个为 Long, 则结果也为 long。<br> 没有 long 时，结果为 int。即使操作数全为 short，byte，结果也是 int。<br>浮点运算：<br> 如果两个操作数有一个为 double，则结果为 double。<br> 只有两个操作数都是 float，则结果才为 float。<br>取模运算：<br> 其操作数可以为浮点数,一般使用整数，结果是“余数”，“余数”符号和左边操作<br>数相同，如：7%3=1，-7%3=-1，7%-3=1。<br>算术运算符中++(自增)，–(自减)属于一元运算符，该类运算符只需要一个操作数</p>
-<h4 id="2-72赋值及其扩展赋值运算符"><a href="#2-72赋值及其扩展赋值运算符" class="headerlink" title="2.72赋值及其扩展赋值运算符"></a>2.72赋值及其扩展赋值运算符</h4><p>运算符 用法举例 等效的表达式<br>+= a  += b     a = a+b<br>-= a  -= b     a = a-b<br>*= a  <em>= b     a = a</em>b<br>/= a  /= b     a = a/b<br>%= a  %= b     a = a%</p>
-<h4 id="2-73关系运算符"><a href="#2-73关系运算符" class="headerlink" title="2.73关系运算符"></a>2.73关系运算符</h4><p>运算符    含义     示例<br>==       等于     a==b<br>!=       不等于   a!=b</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">+-*/</span><br><span class="line">整除：参与运算的双方都是整数，这里的小数部分是直接抛弃，没有进位一说。 <span class="number">10</span>/<span class="number">3</span>=<span class="number">3</span>而不是<span class="number">3.33333</span></span><br><span class="line"><span class="number">10.</span>/<span class="number">3</span>=<span class="number">3.333</span>...这里由于<span class="number">10.</span>是浮点数，则<span class="number">3</span>会自动转换为大类型并参与计算，所以最终是 <span class="number">10.0</span>/<span class="number">3.0</span>的计算结果</span><br><span class="line"></span><br><span class="line">计算次序为先乘除后加减，如果优先级一致，则自动从左向右进行计算  <span class="number">10</span>+<span class="number">2</span>*<span class="number">5</span>=<span class="number">20</span></span><br><span class="line"></span><br><span class="line">%求余（取模）  <span class="number">10</span>%<span class="number">3</span>=<span class="number">1</span>实际就是<span class="number">10</span>除以<span class="number">3</span>求余数</span><br><span class="line"><span class="keyword">double</span> k=<span class="number">10.12</span>;</span><br><span class="line">System.out.println(k%<span class="number">3</span>);  <span class="comment">//参与计算的只有整数部分,符号不参与计算</span></span><br><span class="line">输出：<span class="number">1.1199999999999992</span></span><br><span class="line"></span><br><span class="line">++和--是单目运算符</span><br><span class="line">i++等价于i=i+<span class="number">1</span>,i--等价于i=i-<span class="number">1</span>,注意类型问题</span><br><span class="line">以++为例写法有<span class="number">2</span>个：i++或者++i</span><br><span class="line"></span><br><span class="line">	<span class="keyword">short</span> kk=<span class="number">1</span>;</span><br><span class="line">	kk++; <span class="comment">//自动类型转换</span></span><br><span class="line">	kk=kk+<span class="number">1</span>; <span class="comment">//报错，因为数据类型</span></span><br><span class="line"></span><br><span class="line">i++是先获取i的值，然后再对i加<span class="number">1</span></span><br><span class="line">    <span class="keyword">int</span> age=<span class="number">100</span>;</span><br><span class="line">	System.out.println(age++);输出为<span class="number">100</span></span><br><span class="line">	System.out.println(age);  输出为<span class="number">101</span>,因为上面进行加<span class="number">1</span></span><br><span class="line">	</span><br><span class="line">++i是先对i加<span class="number">1</span>，然后再获取i的值</span><br><span class="line">    <span class="keyword">int</span> age=<span class="number">100</span>;</span><br><span class="line">	System.out.println(++age);输出<span class="number">101</span>,先加<span class="number">1</span>然后获取值</span><br><span class="line">	System.out.println(age);  输出<span class="number">101</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-7-2赋值及其扩展赋值运算符"><a href="#2-7-2赋值及其扩展赋值运算符" class="headerlink" title="2.7.2赋值及其扩展赋值运算符"></a>2.7.2赋值及其扩展赋值运算符</h4><p>运算符 用法举例 等效的表达式<br>+= a  += b     a = a+b<br>-= a  -= b     a = a-b<br>*= a  <em>= b     a = a</em>b<br>/= a  /= b     a = a/b<br>%= a  %= b     a = a%</p>
+<h4 id="2-7-3关系运算符"><a href="#2-7-3关系运算符" class="headerlink" title="2.7.3关系运算符"></a>2.7.3关系运算符</h4><p>运算符    含义     示例<br>==       等于     a==b<br>!=       不等于   a!=b</p>
 <blockquote>
 <pre><code>   大于     a&gt;b</code></pre>
 <p>&lt;        小于     a&lt;b<br>=      大于或等于 a&gt;=b<br>&lt;=      小于或等于 a&lt;=b</p>
 </blockquote>
-<h4 id="2-74逻辑运算符"><a href="#2-74逻辑运算符" class="headerlink" title="2.74逻辑运算符"></a>2.74逻辑运算符</h4><p>运算符                   说明<br>逻辑与&amp;( 与)             两个操作数为 true，结果才是 true，否则是 false<br>逻辑或|(或)              两个操作数有一个是 true，结果就是 true<br>短路与&amp;&amp;( 与)            只要有一个为 false，则直接返回 false<br>短路或||(或)             只要有一个为 true， 则直接返回 true<br>逻辑非!（非）             取反：!false 为 true，!true 为 false<br>逻辑异或^（异或）          相同为 false，不同为 true</p>
+<h4 id="2-7-4逻辑运算符"><a href="#2-7-4逻辑运算符" class="headerlink" title="2.7.4逻辑运算符"></a>2.7.4逻辑运算符</h4><p>运算符                   说明<br>逻辑与&amp;( 与)             两个操作数为 true，结果才是 true，否则是 false<br>逻辑或|(或)              两个操作数有一个是 true，结果就是 true<br>短路与&amp;&amp;( 与)            只要有一个为 false，则直接返回 false<br>短路或||(或)             只要有一个为 true， 则直接返回 true<br>逻辑非!（非）             取反：!false 为 true，!true 为 false<br>逻辑异或^（异或）          相同为 false，不同为 true</p>
+<p>例如A &amp;&amp; B:如果条件A为false,则不会执行B，因为根据运算规则结果一定是false，和B的值没有关系</p>
+<p>A||B：如果条件A为true，则不会执行B，因为格局运算规则结果一定是true，和B的值没有关系</p>
+<p>如果条件1的结果确定后则整个式子计算结果已经确定，则没有必要计算后续的式子</p>
 <p>短路与和短路或采用短路的方式。从左到右计算，如果只通过运算符左边的操作数就能够确定该逻辑表达式的值，则不会继续计算运算符右边的操作数，提高效率。</p>
-<h4 id="2-75位运算符"><a href="#2-75位运算符" class="headerlink" title="2.75位运算符"></a>2.75位运算符</h4><p>位运算符                说明<br>~                      取反<br>&amp;                      按位与<br>|                      按位或<br>^                      按位异或<br>&lt;&lt;                     左移运算符，左移 1 位相当于乘 2</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> age=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">char</span> cc=<span class="string">&#x27;A&#x27;</span>;  <span class="comment">//字符之间的大小比较是通过unicode编码值进行比较</span></span><br><span class="line"><span class="keyword">if</span>(cc&gt;=<span class="string">&#x27;B&#x27;</span> || age++&lt;<span class="number">200</span>)&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;ZZZZZ&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(age);<span class="comment">//?输出101</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nt age=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">char</span> cc=<span class="string">&#x27;A&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(cc&gt;=<span class="string">&#x27;B&#x27;</span> &amp;&amp; age++&lt;<span class="number">200</span>)&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;ZZZZZ&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(age);<span class="comment">//?输出100,因为短路的原因，导致age++并没有得到执行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> age=<span class="number">200</span>;</span><br><span class="line"><span class="keyword">char</span> cc=<span class="string">&#x27;A&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(cc&gt;=<span class="string">&#x27;B&#x27;</span> || age++&lt;=<span class="number">200</span>)&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;ZZZZZ&quot;</span>);</span><br><span class="line">	System.out.println(age);<span class="comment">//?输出201</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-7-5位运算符"><a href="#2-7-5位运算符" class="headerlink" title="2.7.5位运算符"></a>2.7.5位运算符</h4><p>位运算符                说明<br>~                      取反<br>&amp;                      按位与<br>|                      按位或<br>^                      按位异或<br>&lt;&lt;                     左移运算符，左移 1 位相当于乘 2</p>
 <blockquote>
 <blockquote>
 <pre><code>                右移运算符，右移 1 位相当于除 2 取商</code></pre>
 </blockquote>
 </blockquote>
-<h4 id="2-76字符串连接符"><a href="#2-76字符串连接符" class="headerlink" title="2.76字符串连接符"></a>2.76字符串连接符</h4><p>“+”运算符两侧的操作数中只要有一个是字符串(String)类型，系统会自动将另一个操作</p>
+<h4 id="2-7-6字符串连接符"><a href="#2-7-6字符串连接符" class="headerlink" title="2.7.6字符串连接符"></a>2.7.6字符串连接符</h4><p>“+”运算符两侧的操作数中只要有一个是字符串(String)类型，系统会自动将另一个操作</p>
 <p>数转换为字符串然后再进行连接。</p>
-<h4 id="2-77条件运算符"><a href="#2-77条件运算符" class="headerlink" title="2.77条件运算符"></a>2.77条件运算符</h4><p>语法格式：x ? y : z</p>
+<h4 id="2-7-7条件运算符"><a href="#2-7-7条件运算符" class="headerlink" title="2.7.7条件运算符"></a>2.7.7条件运算符</h4><p>语法格式：x ? y : z</p>
 <p>其中 x 为 boolean 类型表达式，先计算 x 的值，若为 true，则整个运算的结果为表达<br>式 y 的值，否则整个运算结果为表达式 z 的值。<br>三目条件运算符:<br>int score = 80;<br>int x = -100;<br>String type =score&lt;60?”不及格”:”及格”;<br>int flag = x &gt; 0 ? 1 : (x == 0 ? 0 : -1);<br>System.out.println(“type= “ + type);<br>System.out.println(“flag= “+ flag);</p>
-<h4 id="2-78运算符优先级问题"><a href="#2-78运算符优先级问题" class="headerlink" title="2.78运算符优先级问题"></a>2.78运算符优先级问题</h4><h3 id="2-8数据类型的转换"><a href="#2-8数据类型的转换" class="headerlink" title="2.8数据类型的转换"></a>2.8数据类型的转换</h3><h4 id="2-81自动类型转换"><a href="#2-81自动类型转换" class="headerlink" title="2.81自动类型转换"></a>2.81自动类型转换</h4><p>自动类型转换指的是容量小的数据类型可以自动转换为容量大的数据类型</p>
+<h3 id="2-8数据类型的转换"><a href="#2-8数据类型的转换" class="headerlink" title="2.8数据类型的转换"></a>2.8数据类型的转换</h3><h4 id="2-81自动类型转换"><a href="#2-81自动类型转换" class="headerlink" title="2.81自动类型转换"></a>2.81自动类型转换</h4><p>自动类型转换指的是容量小的数据类型可以自动转换为容量大的数据类型</p>
 <ul>
-<li><h4 id="2-82强制类型转换"><a href="#2-82强制类型转换" class="headerlink" title="2.82强制类型转换"></a>2.82强制类型转换</h4><p>  强制类型转换，又被称为造型，用于显式的转换一个数值的类型。在有可能丢失信息的<br>情况下进行的转换是通过造型来完成的，但可能造成精度降低或溢出。<br>语法格式：<br>(type)var</p>
+<li><h4 id="2-8-2强制类型转换-窄化操作"><a href="#2-8-2强制类型转换-窄化操作" class="headerlink" title="2.8.2强制类型转换(窄化操作)"></a>2.8.2强制类型转换(窄化操作)</h4><p>强制类型转换，又被称为造型，用于显式的转换一个数值的类型。在有可能丢失信息的<br>情况下进行的转换是通过造型来完成的，但可能造成精度降低或溢出。<br>语法格式：<br>(type)var</p>
 </li>
 </ul>
 <p>double x = 3.14;<br>int nx = (int)x; //值为 3<br>char c = ‘a’;<br>int d = c+1;<br>System.out.println(nx);<br>System.out.println(d);<br>System.out.println((char)d);</p>
-<h4 id="2-83基本类型转换时常见的错误和问题"><a href="#2-83基本类型转换时常见的错误和问题" class="headerlink" title="2.83基本类型转换时常见的错误和问题"></a>2.83基本类型转换时常见的错误和问题</h4><p> 操作比较大的数时，要留意是否溢出，尤其是整数操作时。</p>
-<p>​                                                                                2020年11月6日</p>
+<h4 id="2-8-3基本类型转换时常见的错误和问题"><a href="#2-8-3基本类型转换时常见的错误和问题" class="headerlink" title="2.8.3基本类型转换时常见的错误和问题"></a>2.8.3基本类型转换时常见的错误和问题</h4><p> 操作比较大的数时，要留意是否溢出，尤其是整数操作时。</p>
+<p>​                                                                                2020年11月1日</p>
 <hr>
 <hr>
+<h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><p>###结构化编程</p>
+<p>结构化程式设计(英语:Structured programming)是1960年代开始发展起来的一种编程典范。它采用子程序、程式码区块、for循环以及while循环等结构来取代传统的goto。</p>
+<p>应用代码一般是由三种结构组成：顺序结构、选择结构、循环结构</p>
+<h3 id="指导思想"><a href="#指导思想" class="headerlink" title="指导思想"></a>指导思想</h3><p>自顶向下、逐步求精、模块化 </p>
+<h3 id="编程过程"><a href="#编程过程" class="headerlink" title="编程过程"></a>编程过程</h3><p>流程图是流经一个系统的信息流、观点流或部件流的图形代表。在企业中，流程图主要用来说明某一过程。这种过程既可以是生产线上的工艺流程，也可以是完成一项任务必需的管理过程。常见的绘制工具有Visio、PowerDesigner等。</p>
+<p>1、圆角矩形表示“开始”与“结束”。</p>
+<p>2、矩形表示行动方案、普通工作环节用</p>
+<p>3、菱形表示问题判断或判定（审核/审批/评审）环节</p>
+<p>4、用平行四边形表示输入输出　</p>
+<p>5、箭头代表工作流方向</p>
+<h3 id="结构化编程的推论"><a href="#结构化编程的推论" class="headerlink" title="结构化编程的推论"></a>结构化编程的推论</h3><p>任何复杂的问题都可以三种基本算法结构来描述：顺序、选择、循环。因此用计算机语句描述的程序也包含三种基本结构 </p>
+<h3 id="条件判断结构"><a href="#条件判断结构" class="headerlink" title="条件判断结构"></a>条件判断结构</h3><p>选择结构用于判断给定的条件，然后根据判断的结果来控制程序的流程。主要的条件判 断结构有：if 结构和 switch 结构。而 if 结构又可以分为 if 单分支结构、if-else 双分支结构、 if-else if-else 多分支结构。 </p>
+<p>语法：   <code>if(条件判断语句)&#123;代码A;&#125; </code>当条件成立时执行代码A，如果条件不成立则不执行代码A，而是直接执行if的下一句</p>
+<p>​              <code>if(条件)&#123;代码块1;&#125;else&#123;代码块2;&#125;</code>当条件成立时执行代码块1，如果条件不成立则执行代码块2。没有一种情况是同时执行代码块1和2</p>
+<p>​         <code>if(条件1)&#123;代码块1;&#125;else if(条件2)&#123;代码块2;&#125;...else&#123;代码块n;&#125;</code>当条件1成立时执行代码块1，如果条件1不成立继续判断条件2，如果条件2成立则执行代码块2,依次类推。没有一种情况是同时执行代码块1和2</p>
+<p>需求：要求输入学生性别，如果false则显示女的啊</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> sex=<span class="keyword">true</span>;</span><br><span class="line">Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">sex=sc.nextBoolean();</span><br><span class="line"><span class="keyword">if</span>(sex)&#123;  <span class="comment">//这里是一个简化写法，实际上就是true==sex</span></span><br><span class="line">    System.out.println(<span class="string">&quot;男&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>   <span class="comment">//如果代码块中只有一条语句时，&#123;&#125;可写可不写</span></span><br><span class="line">    System.out.println(<span class="string">&quot;女&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>###switch 多分支结构 </p>
+<p>语法结构： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123;</span><br><span class="line"><span class="keyword">case</span> 值 <span class="number">1</span>:</span><br><span class="line">语句序列 <span class="number">1</span>;</span><br><span class="line">[<span class="keyword">break</span>];</span><br><span class="line"><span class="keyword">case</span> 值 <span class="number">2</span>:</span><br><span class="line">语句序列 <span class="number">2</span>;</span><br><span class="line">[<span class="keyword">break</span>]; … … … … …</span><br><span class="line">[<span class="keyword">default</span>:</span><br><span class="line">默认语句;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>语法点：</p>
+<ul>
+<li>表达式的计算结果可以是整型【不允许long类型】,可以是char，同时允许是字串类型[String]</li>
+<li>default的位置没有特殊要求，但是一定是所有的case值不相等时才会执行。但是为了增强可读性，所以一般建议写在所有的case之后</li>
+</ul>
+<p>需求：输入月份，显示对应的本月的天数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test002</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//公历闰年遵循的规律为: 四年一闰,百年不闰,四百年再闰.</span></span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		System.out.println(<span class="string">&quot;请输入月份：&quot;</span>);</span><br><span class="line">		<span class="keyword">int</span> month = sc.nextInt();</span><br><span class="line">		System.out.println(<span class="string">&quot;请输入年份：&quot;</span>);</span><br><span class="line">		<span class="keyword">int</span> year = sc.nextInt();</span><br><span class="line">		<span class="keyword">switch</span> (month) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			<span class="keyword">if</span>((year%<span class="number">4</span>==<span class="number">0</span>&amp;&amp;year%<span class="number">100</span>!=<span class="number">0</span>)||year/<span class="number">400</span>==<span class="number">0</span>) &#123;</span><br><span class="line">				res = <span class="number">29</span>;</span><br><span class="line">			&#125;<span class="keyword">else</span></span><br><span class="line">				res = <span class="number">28</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">8</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">		res = <span class="number">31</span>; </span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">		res = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			res  =-<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(year+<span class="string">&quot;年&quot;</span>+month+<span class="string">&quot;月份有:&quot;</span>+res+<span class="string">&quot;天&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>要求输入学生成绩（假设成绩都是整数），如果&gt;=80显示优秀，如果&gt;=70显示良好，如果&gt;=60显示及格，否则显示不及格 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> score=sc.nextInt();</span><br><span class="line">		<span class="keyword">int</span> key = score / <span class="number">10</span>;</span><br><span class="line">		String res=<span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">switch</span> (key) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">8</span>:	</span><br><span class="line">			res=<span class="string">&quot;优秀&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">			res=<span class="string">&quot;良好&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">			res=<span class="string">&quot;及格&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			res=<span class="string">&quot;不及格&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">&quot;学生成绩为:&quot;</span>+score+<span class="string">&quot;评级为：&quot;</span>+res);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4><p>循环就是重复做某一件事情。在Java程序中，循环控制即在某一情况下，控制程序重复执行某一条或多条语句，直到遇到终止条件为止</p>
+<p>循环语句也称迭代语句，在Java语言中存在的while、for和do-while循环语句</p>
+<p>循环结构分两大类，一类是当型，一类是直到型。 </p>
+<p> 当型： 当布尔表达式条件为 true 时，反复执行某语句，当布尔表达式的值为 false 时才停 止循环，比如：while 与 for 循环。</p>
+<p>  直到型： 先执行某语句， 再判断布尔表达式，如果为 true，再执行某语句，如此反复，直 到布尔表达式条件为 false 时才停止循环，比如 do-while 循环。 </p>
+<h5 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h5><p>while是Java中最基本的循环语句，满足条件才执行循环体，如果不满足条件则不执行。所以有可能循环体一次都不执行。</p>
+<p>语法：<code>while(条件)&#123;循环体;&#125;</code>当条件成立时反复执行循环体，每执行一次判断一次条件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test003</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(x&lt;=<span class="number">100</span>) &#123;</span><br><span class="line">			res = res+x;</span><br><span class="line">			x++;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(res);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>需求：计算所有100以内奇数的和</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(k&lt;<span class="number">100</span>)&#123;</span><br><span class="line">            res+=k;</span><br><span class="line">            k=k+<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(res);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do/while循环"></a>do/while循环</h5><p>语法：<code>do&#123;循环体;&#125;while(条件);</code> 先执行循环体，然后进行条件判断，如果条件为true，则执行下次循环；如果条件为false则终止循环。</p>
+<ul>
+<li><p>不同于while循环的点：do/while循环至少执行循环体一次，而while循环有可能一次都不执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test006</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">do</span> &#123;</span><br><span class="line">			res +=k++;</span><br><span class="line">		&#125;<span class="keyword">while</span>(k&lt;<span class="number">101</span>);</span><br><span class="line">		System.out.println(res);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>###for循环</p>
+<p>语法：<code>for(表达式1；表达式2：表达式3)&#123;循环体;&#125;</code>这里不是逗号</p>
+<ul>
+<li><p>执行表达式1</p>
+</li>
+<li><p>执行表达式2，一般表达式2是一个条件，如果条件为true则执行循环体；如果条件为false则终止循环</p>
+</li>
+<li><p>执行循环体</p>
+</li>
+<li><p>执行表达式3</p>
+</li>
+<li><p>执行第2步骤</p>
+</li>
+<li><p>for 循环语句是支持迭代的一种通用结构，是最有效、最灵活的循环结构。for 循环在第 一次反复之前要进行初始化，即执行初始表达式；随后，对布尔表达式进行判定，若判定结 果为 true，则执行循环体，否则，终止循环；最后在每一次反复的时候，进行某种形式的“步 进”，即执行迭代因子。</p>
+</li>
+<li><p>  初始化部分设置循环变量的初值 </p>
+</li>
+<li><p> 条件判断部分为任意布尔表达式 </p>
+</li>
+<li><p> 迭代因子控制循环变量的增减 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test007</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">101</span>;k++) &#123;</span><br><span class="line">			res+=k++; </span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(res);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h4 id="三种循环写法的选择"><a href="#三种循环写法的选择" class="headerlink" title="三种循环写法的选择"></a>三种循环写法的选择</h4><ul>
+<li><p>for循环一般用于可以明确循环次数的场景中</p>
+</li>
+<li><p>while循环一般用于不能预先确定循环执行次数的场景中</p>
+</li>
+<li><p>do/while循环一般用于不能预先确定循环执行次数，同时要求循环体至少执行一次的场景中</p>
+<p>​                                                    2020年11月3日</p>
+</li>
+</ul>
+<hr>
+<h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><p>在一个循环语句内部再嵌套一个或多个循环，称为嵌套循环。while、do-while 与 for 循 环可以任意嵌套多层。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> text;</span><br><span class="line"><span class="comment">//打印乘法表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test002</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;<span class="number">10</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j =<span class="number">1</span>;j&lt;=i;j++) &#123;</span><br><span class="line">				System.out.print(j+<span class="string">&quot;*&quot;</span>+i+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="break-语句和-continue-语句"><a href="#break-语句和-continue-语句" class="headerlink" title="break 语句和 continue 语句"></a>break 语句和 continue 语句</h3><p>在任何循环语句的主体部分，均可用 break 控制循环的流程。break 用于强行退出循环， 不执行循环中剩余的语句。 continue 语句用在循环语句体中，用于终止某次循环过程，即跳过循环体中尚未执行的 语句，接着进行下一次是否执行循环的判定。 </p>
+<p>break语句除了与switch结合使用外，还用来强制中断当前的循环，不再执行循环体中break后面的语句而退出循环。</p>
+<p>continue语句的功能是，在循环语句中，当碰到continue时，将不再执行循环体continue之后的语句，而重新判断循环控制的条件，继续循环，直到循环条件的值为假时退出循环 </p>
+<hr>
+<h3 id="语句块"><a href="#语句块" class="headerlink" title="语句块"></a>语句块</h3><p>语句块（有时叫做复合语句），是用花括号扩起的任意数量的简单 Java 语句。块确定了 局部变量的作用域。块中的程序代码，作为一个整体，是要被一起执行的。块可以被嵌套在 另一个块中，但是不能在两个嵌套的块内声明同名的变量。语句块可以使用外部的变量，而 外部不能使用语句块中定义的变量，因为语句块中定义的变量作用域只限于语句块。 </p>
+<h3 id="方法的概念"><a href="#方法的概念" class="headerlink" title="方法的概念"></a>方法的概念</h3><p>​        方法可以理解为一个命名的代码块，通过名称就可以重复使用这段代码，而不需要反复书写，可以达到代码重用的目的</p>
+<p>方法可以有参数，也可以没有参数；方法可以有返回值，也可以没有返回值。方法中含有void时，必须要有返回值，没有时，则不需要返回值</p>
+<h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><p>方法的重载是指一个类中可以定义多个方法名相同，但参数不同的方法。 调用时，会 根据不同的参数自动匹配对应的方法 </p>
+<p>重载的方法，实际是完全不同的方法，只是名称相同而已！ </p>
+<h3 id="递归调用"><a href="#递归调用" class="headerlink" title="递归调用"></a>递归调用</h3><p>递归是一种常见的解决问题的方法，即把问题逐渐简单化。递归的基本思想就是“自己 调用自己”，一个使用递归技术的方法将会直接或者间接的调用自己 .</p>
+<p>1.斐波那契数列Fibonacci sequence</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> text;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test009</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		System.out.println(<span class="string">&quot;请输入你想知道兔子数的月份：&quot;</span>);</span><br><span class="line">		<span class="keyword">int</span> kk = sc.nextInt();</span><br><span class="line">		System.out.println(Fibonacci(kk));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> month)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (month &gt;= <span class="number">3</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> (Fibonacci(month - <span class="number">1</span>) + Fibonacci(month - <span class="number">2</span>));</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
             <hr/>

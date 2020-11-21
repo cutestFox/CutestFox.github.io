@@ -794,6 +794,177 @@
 
 
 <p>​                                                                            2020年11月17日</p>
+<hr>
+<hr>
+<h3 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h3><p>####包装类的基本知识</p>
+<p>Java 是面向对象的语言，但并不是“纯面向对象”的， 所以我们在实际应用中经常需要将基本数据转化成对象，以便于操作。 </p>
+<p>基本数据类型<strong>： byte     boolean     short     char              int           long     float     double</strong></p>
+<p>包装数据类型： <strong>Byte     Boolean     Short    Character     Integer   Long    Float     Double</strong></p>
+<p>Number 类是抽象类，因此它的抽象方法，所有子类都需要提供实现。Number 类提供了 抽象方法：intValue()、longValue()、floatValue()、doubleValue()，意味着所有的“数 字型”包装类都可以互相转型。 </p>
+<h4 id="包装类的用途"><a href="#包装类的用途" class="headerlink" title="包装类的用途"></a>包装类的用途</h4><ol>
+<li>作为和基本数据类型对应的类型存在，方便涉及到对象的操作，如 Object[ ]、集合等 的操作。</li>
+<li>包含每种基本数据类型的相关属性如最大值、最小值等，以及相关的操作方法（这些操 作方法的作用是在基本数据类型、包装类对象、字符串之间提供相互之间的转化！）。 </li>
+</ol>
+<h4 id="自动装拆箱"><a href="#自动装拆箱" class="headerlink" title="自动装拆箱"></a>自动装拆箱</h4><p><strong>自动装箱：</strong> 基本类型的数据处于需要对象的环境中时，会自动转为“对象”。 我们以 Integer 为例： 在 JDK1.5 以前，这样的代码 Integer i = 5 是错误的，必须要通过 Integer i = new Integer(5) 这样的语句来实现基本数据类型转换成包装类的过程； 而在 JDK1.5 以后，Java 提供了自动装箱的功能，因此只需 Integer i = 5 这样的语句 就能 实现基 本数据 类型转 换成包 装类， 这是因 为 JVM 为我 们执行 了 Integer i = Integer.valueOf(5)这样的操作，这就是 Java 的自动装箱。 </p>
+<p><strong>自动拆箱：</strong> 每当需要一个值时，对象会自动转成基本数据类型，没必要再去显式调用 intValue()、 doubleValue()等转型方法。 如 Integer i = 5;int j = i; 这样的过程就是自动拆箱。 我们可以用一句话总结自动装箱/拆箱： 自动装箱过程是通过调用包装类的 valueOf()方法实现的，而自动拆箱过程是通过调用 包装类的 xxxValue()方法实现的（xxx 代表对应的基本数据类型，如 intValue()、 doubleValue()等）。 </p>
+<p>自动装箱与拆箱的功能事实上是编译器来帮的忙，编译器在编译时依据您所编写的语 法，决定是否进行装箱或拆箱动作 </p>
+<h3 id="字符串相关类"><a href="#字符串相关类" class="headerlink" title="字符串相关类"></a>字符串相关类</h3><p>String 类、StringBuilder 类、StringBuffer 类是三个字符串相关类。String 类是的对 象代表不可变的字符序列，StringBuilder 类和 StringBuffer 类代表可变字符序列。 </p>
+<p>String类是的对 象代表不可变的字符序列，StringBuilder 类和 StringBuffer 类代表可变字符序列 </p>
+<p>String内部被final修饰，因此是对象内部的成员变量的值无法再改变。 </p>
+<p>StringBuffer 和 StringBuilder 非常类似，均代表可变的字符序列。 这两个类都是抽 象类 AbstractStringBuilder 的子类 </p>
+<p><strong>StringBuffer 和 StringBuilder的区别：</strong></p>
+<p>​    1. StringBuffer JDK1.0 版本提供的类，线程安全，做线程同步检查， 效率较低。 </p>
+<p>​    2.StringBuilder JDK1.5 版本提供的类，线程不安全，不做线程同步检查，因此效率较高。 </p>
+<p>常用方法列表：</p>
+<p>​     重载的 public StringBuilder append(…)方法 可以为该 StringBuilder 对象添加字符序列，仍然返回自身对象。 </p>
+<p>​    方法 public StringBuilder delete(int start,int end) 可以删除从 start 开始到 end-1 为止的一段字符序列，仍然返回自身对象。</p>
+<pre><code>  方法 public StringBuilder deleteCharAt(int index) 移除此序列指定位置上的 char，仍然返回自身对象。
+
+  重载的 public StringBuilder insert(…)方法 可以为该 StringBuilder 对象在指定位置插入字符序列，仍然返回自身对象。</code></pre>
+<p>​    方法 public StringBuilder reverse() 用于将字符序列逆序，仍然返回自身对象。</p>
+<p>​     方法 public String toString() 返回此序列中数据的字符串表示形式。 </p>
+<p>​    和 String 类含义类似的方法：</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(String str)</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(String str,<span class="keyword">int</span> fromIndex)</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">substring</span><span class="params">(<span class="keyword">int</span> start)</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">substring</span><span class="params">(<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">length</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">charAt</span><span class="params">(<span class="keyword">int</span> index)</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:\Users\ADMINI~1\AppData\Local\Temp\1605695046600.png" alt="1605695046600"></p>
+<h3 id="时间处理相关类"><a href="#时间处理相关类" class="headerlink" title="时间处理相关类"></a>时间处理相关类</h3><h4 id="Date-时间类-java-util-Date"><a href="#Date-时间类-java-util-Date" class="headerlink" title="Date 时间类(java.util.Date)"></a>Date 时间类(java.util.Date)</h4><p>​    在标准 Java 类库中包含一个 Date 类。它的对象表示一个特定的瞬间，精确到毫秒。</p>
+<pre><code> Date() 分配一个 Date 对象，并初始化此对象为系统当前的日期和时间，可以精 确到毫秒）</code></pre>
+<p>​    Date(long date) 分配 Date 对象并初始化此对象，以表示自从标准基准时间（称 为“历元（epoch）”，即             1970 年 1 月 1 日 00:00:00 GMT）以来的指定毫 秒数。</p>
+<p>​     boolean after(Date when) 测试此日期是否在指定日期之后</p>
+<p>​     booleanbefore(Date when) 测试此日期是否在指定日期之前。</p>
+<pre><code> boolean equals(Object obj) 比较两个日期的相等性。</code></pre>
+<p>​    long getTime() 返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 Date 对 象表示的毫秒数</p>
+<p>​     String toString() 把此 Date 对象转换为以下形式的 String： dow mon dd hh:mm:ss zzz yyyy 其中：dow 是一周中的某一天 (Sun、Mon、 Tue、 Wed、 Thu、 Fri、 Sat)。 </p>
+<h4 id="Date-类的使用"><a href="#Date-类的使用" class="headerlink" title="Date 类的使用"></a>Date 类的使用</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> nowNum = System.currentTimeMillis(); <span class="comment">//当前时刻对应的毫秒数</span></span><br><span class="line">Date d = <span class="keyword">new</span> Date(); <span class="comment">//当前时刻的对象</span></span><br><span class="line">System.out.println(d.getTime()); <span class="comment">//返回时间对应的毫秒数</span></span><br><span class="line">Date d2 = <span class="keyword">new</span> Date(<span class="number">1000L</span> * <span class="number">3600</span> * <span class="number">24</span> * <span class="number">365</span> * <span class="number">150</span>); <span class="comment">//距离 1970</span></span><br><span class="line">年 <span class="number">150</span> 年</span><br><span class="line">System.out.println(d2);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="DateFormat-类和-SimpleDateFormat-类"><a href="#DateFormat-类和-SimpleDateFormat-类" class="headerlink" title="DateFormat 类和 SimpleDateFormat 类"></a>DateFormat 类和 SimpleDateFormat 类</h4><h5 id="·DateFormat-类的作用"><a href="#·DateFormat-类的作用" class="headerlink" title="·DateFormat 类的作用"></a>·DateFormat 类的作用</h5><p>把时间对象转化成指定格式的字符串。反之，把指定格式的字符串转化成时间对象。 DateFormat 是一个抽象类，一般使用它的的子类 SimpleDateFormat 类来实现。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDateFormat</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[ ] args)</span> <span class="keyword">throws</span> ParseException </span>&#123;</span><br><span class="line"><span class="comment">// new 出 SimpleDateFormat 对象</span></span><br><span class="line">SimpleDateFormat s1 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>);</span><br><span class="line">SimpleDateFormat s2 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd&quot;</span>);</span><br><span class="line"><span class="comment">// 将时间对象转换成字符串</span></span><br><span class="line">String daytime = s1.format(<span class="keyword">new</span> Date());</span><br><span class="line">System.out.println(daytime);</span><br><span class="line">System.out.println(s2.format(<span class="keyword">new</span> Date()));</span><br><span class="line">System.out.println(<span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;hh:mm:ss&quot;</span>).format(<span class="keyword">new</span></span><br><span class="line">Date()));</span><br><span class="line"><span class="comment">// 将符合指定格式的字符串转成成时间对象.字符串格式需要和指定格式一致。</span></span><br><span class="line">String time = <span class="string">&quot;2027-10-7&quot;</span>;</span><br><span class="line">Date date = s2.parse(time);</span><br><span class="line">System.out.println(<span class="string">&quot;date1: &quot;</span> + date);</span><br><span class="line">time = <span class="string">&quot;2027-10-7 20:15:30&quot;</span>;</span><br><span class="line">date = s1.parse(time);</span><br><span class="line">System.out.println(<span class="string">&quot;date2: &quot;</span> + date);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>获取今天时本年度第几天 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDateFormat2</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[ ] args)</span> </span>&#123;</span><br><span class="line">SimpleDateFormat s1 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;D&quot;</span>);</span><br><span class="line">String daytime = s1.format(<span class="keyword">new</span> Date());</span><br><span class="line">System.out.println(daytime);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Calendar-日历类"><a href="#Calendar-日历类" class="headerlink" title="Calendar 日历类"></a>Calendar 日历类</h4><p>Calendar 类是一个抽象类，为我们提供了关于日期计算的相关功能，比如：年、月、 日、时、分、秒的展示和计算。 </p>
+<p><strong>注意：</strong>注意月份的表示，一月是 0，二月是 1，以此类推，12 月是 11。 因为大多数人习惯于使用 单词而不是使用数字来表示月份，这样程序也许更易读，父类 Calendar 使用常量来表示月份： JANUARY、FEBRUARY 等等 </p>
+<p><strong>GregorianCalendar 类和 Calendar 类的使用</strong> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestCalendar</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[ ] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">// 得到相关日期元素</span></span><br><span class="line">GregorianCalendar calendar = <span class="keyword">new</span> GregorianCalendar(<span class="number">2999</span>, <span class="number">10</span>, <span class="number">9</span>, <span class="number">22</span>, <span class="number">10</span>, <span class="number">50</span>);</span><br><span class="line"><span class="keyword">int</span> year = calendar.get(Calendar.YEAR); <span class="comment">// 打印：1999</span></span><br><span class="line"><span class="keyword">int</span> month = calendar.get(Calendar.MONTH); <span class="comment">// 打印：10</span></span><br><span class="line"><span class="keyword">int</span> day = calendar.get(Calendar.DAY_OF_MONTH); <span class="comment">// 打印：9</span></span><br><span class="line"><span class="keyword">int</span> day2 = calendar.get(Calendar.DATE); <span class="comment">// 打印：9</span></span><br><span class="line"><span class="comment">// 日：Calendar.DATE 和 Calendar.DAY_OF_MONTH 同义</span></span><br><span class="line"><span class="keyword">int</span> date = calendar.get(Calendar.DAY_OF_WEEK); <span class="comment">// 打印：3</span></span><br><span class="line"><span class="comment">// 星期几 这里是：1-7.周日是 1，周一是 2，。。。周六是 7</span></span><br><span class="line">System.out.println(year);</span><br><span class="line">System.out.println(month);</span><br><span class="line">System.out.println(day);</span><br><span class="line">System.out.println(day2);</span><br><span class="line">System.out.println(date);</span><br><span class="line"><span class="comment">// 设置日期</span></span><br><span class="line">GregorianCalendar calendar2 = <span class="keyword">new</span> GregorianCalendar();</span><br><span class="line">calendar2.set(Calendar.YEAR, <span class="number">2999</span>);</span><br><span class="line">calendar2.set(Calendar.MONTH, Calendar.FEBRUARY); <span class="comment">// 月份数：0-11</span></span><br><span class="line">calendar2.set(Calendar.DATE, <span class="number">3</span>);</span><br><span class="line">calendar2.set(Calendar.HOUR_OF_DAY, <span class="number">10</span>);</span><br><span class="line">calendar2.set(Calendar.MINUTE, <span class="number">20</span>);</span><br><span class="line">calendar2.set(Calendar.SECOND, <span class="number">23</span>);</span><br><span class="line">printCalendar(calendar2);</span><br><span class="line"><span class="comment">// 日期计算</span></span><br><span class="line">GregorianCalendar calendar3 = <span class="keyword">new</span> GregorianCalendar(<span class="number">2999</span>, <span class="number">10</span>, <span class="number">9</span>, <span class="number">22</span>, <span class="number">10</span>, <span class="number">50</span>);</span><br><span class="line">calendar3.add(Calendar.MONTH, -<span class="number">7</span>); <span class="comment">// 月份减 7</span></span><br><span class="line">calendar3.add(Calendar.DATE, <span class="number">7</span>); <span class="comment">// 增加 7 天</span></span><br><span class="line">printCalendar(calendar3);</span><br><span class="line"><span class="comment">// 日历对象和时间对象转化</span></span><br><span class="line">Date d = calendar3.getTime();</span><br><span class="line">GregorianCalendar calendar4 = <span class="keyword">new</span> GregorianCalendar();</span><br><span class="line">calendar4.setTime(<span class="keyword">new</span> Date());</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printCalendar</span><span class="params">(Calendar calendar)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> year = calendar.get(Calendar.YEAR);</span><br><span class="line"><span class="keyword">int</span> month = calendar.get(Calendar.MONTH) + <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> day = calendar.get(Calendar.DAY_OF_MONTH);</span><br><span class="line"><span class="keyword">int</span> date = calendar.get(Calendar.DAY_OF_WEEK) - <span class="number">1</span>; <span class="comment">// 星期几</span></span><br><span class="line">String week = <span class="string">&quot;&quot;</span> + ((date == <span class="number">0</span>) ? <span class="string">&quot;日&quot;</span> : date);</span><br><span class="line"><span class="keyword">int</span> hour = calendar.get(Calendar.HOUR);</span><br><span class="line"><span class="keyword">int</span> minute = calendar.get(Calendar.MINUTE);</span><br><span class="line"><span class="keyword">int</span> second = calendar.get(Calendar.SECOND);</span><br><span class="line">System.out.printf(<span class="string">&quot;%d 年%d 月%d 日,星期%s %d:%d:%d\n&quot;</span>, year, month, day, week, hour, minute, second);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h4><p>Math 类的常用方法： </p>
+<p>abs 绝对值</p>
+<p>acos,asin,atan,cos,sin,tan 三角函数 </p>
+<p>sqrt 平方根 </p>
+<p> pow(double a, double b) a 的 b 次幂 </p>
+<p> max(double a, double b) 取大值 </p>
+<p>min(double a, double b) 取小值 </p>
+<p> ceil(double a) 大于 a 的最小整数 </p>
+<p> floor(double a) 小于 a 的最大整数 </p>
+<p> random() 返回 0.0 到 1.0 的随机数 </p>
+<p> long round(double a) double 型的数据 a 转换为 long 型（四舍五入）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestMath</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[ ] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//取整相关操作</span></span><br><span class="line">System.out.println(Math.ceil(<span class="number">3.2</span>));</span><br><span class="line">System.out.println(Math.floor(<span class="number">3.2</span>));</span><br><span class="line">System.out.println(Math.round(<span class="number">3.2</span>));</span><br><span class="line">System.out.println(Math.round(<span class="number">3.8</span>));</span><br><span class="line"><span class="comment">//绝对值、开方、a 的 b 次幂等操作</span></span><br><span class="line">System.out.println(Math.abs(-<span class="number">45</span>));</span><br><span class="line">System.out.println(Math.sqrt(<span class="number">64</span>));</span><br><span class="line">System.out.println(Math.pow(<span class="number">5</span>, <span class="number">2</span>));</span><br><span class="line">System.out.println(Math.pow(<span class="number">2</span>, <span class="number">5</span>));</span><br><span class="line"><span class="comment">//Math 类中常用的常量</span></span><br><span class="line">System.out.println(Math.PI);</span><br><span class="line">System.out.println(Math.E);</span><br><span class="line"><span class="comment">//随机数</span></span><br><span class="line">System.out.println(Math.random());<span class="comment">// [0,1)</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="Random类"><a href="#Random类" class="headerlink" title="Random类"></a>Random类</h4><p>Random类中实现的随机算法是伪随机，也就是有规则的随机。在进行随机数计算时，随机算法的起源数字【参数】称为种子数seed，在种子数的基础上进行一定的变换，从而产生需要的随机数字</p>
+<p>boolean nextBoolean()方法的作用是生成一个随机的boolean值，生成true和false的值几率相等，也就是都是50%的几率</p>
+<p>double nextDouble()方法的作用是生成一个随机的double值，数值介于[0,1.0)之间</p>
+<p> int nextInt()该方法的作用是生成一个随机的int值，该值介于int的区间，也就是2e9之间</p>
+<p><strong>int nextInt(int n)方法的作用是生成一个随机的int值，该值介于[0,n)的区间，也就是0到n之间的随机int值，包含0而不包含n</strong></p>
+<p>​    <strong>需要生成一个4位整数:1000+r.nextInt(9000)</strong></p>
+<h2 id="面相对象篇"><a href="#面相对象篇" class="headerlink" title="面相对象篇"></a>面相对象篇</h2><p>###封装</p>
+<p>​    封装是指将现实世界中存在的某个客体的属性与行为绑定在一起，并放置在一个逻辑单元内。</p>
+<p>封装是一种将代码与其处理的数据结合起来，而<strong>不被外界干扰和滥用的程序设计机制</strong>。该逻辑单元负责将所描述的属性隐藏起来，外界对客体内部属性的所有访问只能通过提供的用户接口实现。</p>
+<p>既可以实现对客体属性的保护作用，又可以提高软件系统的可维护性</p>
+<p>只要用户接口不改变，任何封装体内部的改变都不会对软件系统的其他部分造成影响</p>
+<p><strong>封装隐藏实现细节，并对外提供了公共的访问方式</strong></p>
+<p>调用对象时是无需了解其中的细节，只需要知道调用方法接口、方法或者类都是一个封装体。Java的基本封装单元就是类class，组成类的代码或数据称为类的成员。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承就是在已经存在的类的基础上，再进行扩展，从而产生新的类，支持了层次结构分类的概念</p>
+<p><strong>abstract</strong>：abstract 可以用来修饰一个方法，当使用abstract修饰方法的时候，表示这个方法是抽象的，不能具有方法体抽象方法只能放在抽象类或接口中，</p>
+<p>抽象类只能被抽象继承或者在继承的时候将父类的抽象方法具体化</p>
+<p>（1）抽象类不能被实例化</p>
+<p>（2）包含抽象方法的类，必须标识 abstract</p>
+<p>当类是抽象的时候，需要实现对象的时候，可以使用匿名类也就是说在调用的时候（将父类中的抽象方法重写成具体的）</p>
+<p>匿名类是一次性的，只能使用一次，也就是说，即使即使创建两个匿名类类容一模一样，也是不同的两个对象</p>
+<p>里氏替换原则：可替换性是面向对象编程中的一个原则，指的是在计算机程序中，如果S是T的一个子类型，那么T类型的对象可以被S类型的对象替换（即，T类型的对象可以被S子类型的任何对象替换），而不改变程序的任何原定的属性（正确性、执行的任务等） </p>
+<p><strong>this和super</strong></p>
+<p>this用于指代当前对象</p>
+<p>super用于指代当前对象的父类中定义的成员，super是否能够访问取决于范围限定词</p>
+<p>1、从语义的角度上说，this用于指代当前对象；super用于指代父类对象</p>
+<p>1、this()表示调用另外一个构造器,super()表示调用父类中的某个构造器，()中的参数决定调用的是哪个构造器</p>
+<p>2、this.成员属性用于表示当前对象的某个成员，一般用于局部变量和属性名称一致的场景下。super.成员属性用于表示父类中定义的某个属性，一般用于子类中覆盖定义了某个父类属性的场景下。</p>
+<p>3、this.成员方法()用于表示当前对象的某个成员方法；super.成员方法()用于表示当前类的父类中定义的某个成员方法，一般用于覆盖定义时【就近原则】。</p>
+<p>4、在static方法中不允许使用this/super之类关键字</p>
+<p>**interface(**接口）：java类中不允许多继承只允许单继承，但是在接口中可以多继承，类在实现接口的时候也可以实现多个接口，接口中的方法默认是抽象的，所以在实现接口时需要将抽象方法具体化，如果类中的两个接口中的抽象方法，方法名、参数、返回值类型是一样的，在类中只需要实现一种方法即可。</p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>1.重载时多态</p>
+<p>2.继承时多态</p>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><h5 id="final"><a href="#final" class="headerlink" title="final"></a>final</h5><p>final可以修饰方法、属性、类型，在修饰方法的时候父类的方法只能被子类调用而不可以重写，修饰属性的时候需要赋值，或者在构造方法中对final所修饰的属性进行赋值，因为父类中的构造方法一定会执行的，所以可以在构造方法中对final修饰的属性赋值，一旦赋值则不可以改变。final修饰类的时候不允许被继承，因为final意为最终的最后的不可变的，而继承是extends是可扩展的可延伸的，所以说在final修饰的类中不允许被继承，他类中的属性是不可变的！！！！</p>
+<h5 id="static"><a href="#static" class="headerlink" title="static"></a>static</h5><p>被static所修饰的含有静态属性，static可以修饰方法，可以修饰内部类、语句块、属性</p>
+<p>被static修饰的，可以不用对象调用 ，随着类的加载自动执行，优先于对象，可以用类名直接调出</p>
+<p>static属性是当前类的所有对象所共有的共同属性(只有一个，而普通属性各个对象都有自己的，相互隔离)，任何一个当前类对象修改这个属性，所有其他类对象的这个属性都会受影响</p>
+<p>​    <strong>执行顺序：  静态属性—属性—构造器</strong></p>
+<p><strong>static执行时机：</strong></p>
+<p>​    <strong>静态属性的处理在类加载之后自动执行，和是否需要构造对象无关，如果不new，则不会处理非静态属性和指定构造器方法</strong> </p>
+<p>静态方法执行时很有可能并没有构建对象，所以在<strong>静态方法中不允许使用this/super</strong>之类用于指定对象的关键字</p>
+<p><strong>规则：静态方法只能直接访问静态成员，不能直接访问非静态成员</strong></p>
+<p>也就是说被static修饰的方法不可以调用非静态的方法，而非静态方法可以调用静态方法</p>
+<p>定义A1类继承于E1类</p>
+<p>由于E1类是A1类的父类，所以先加载E1类，加载完毕处理静态块和静态属性；然后加载A1类, 加载完毕处理静态块和静态属性。</p>
+<p>new A1()一定是先构建父类对象，然后在构建A1类对象。所以先处理E1类中的非静态代码块和非静态属性，然后执行E1类的构造器；继续处理子类中的非静态代码块和非静态属性，然后执行A1类中的构造器</p>
+<p><strong>访问控制</strong></p>
+<p><strong>public</strong>到处可见   <strong>private</strong>当前类内可见  默认同包可见   <strong>protected</strong>同包和子类中可见</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>类内</th>
+<th>同包</th>
+<th>子类</th>
+<th>到处</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private</td>
+<td>T</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>默认</td>
+<td>T</td>
+<td>T</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>protected</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td></td>
+</tr>
+<tr>
+<td>public</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+</tbody></table>
 
             </div>
             <hr/>

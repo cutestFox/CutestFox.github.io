@@ -808,7 +808,8 @@
 <h4 id="自动装拆箱"><a href="#自动装拆箱" class="headerlink" title="自动装拆箱"></a>自动装拆箱</h4><p><strong>自动装箱：</strong> 基本类型的数据处于需要对象的环境中时，会自动转为“对象”。 我们以 Integer 为例： 在 JDK1.5 以前，这样的代码 Integer i = 5 是错误的，必须要通过 Integer i = new Integer(5) 这样的语句来实现基本数据类型转换成包装类的过程； 而在 JDK1.5 以后，Java 提供了自动装箱的功能，因此只需 Integer i = 5 这样的语句 就能 实现基 本数据 类型转 换成包 装类， 这是因 为 JVM 为我 们执行 了 Integer i = Integer.valueOf(5)这样的操作，这就是 Java 的自动装箱。 </p>
 <p><strong>自动拆箱：</strong> 每当需要一个值时，对象会自动转成基本数据类型，没必要再去显式调用 intValue()、 doubleValue()等转型方法。 如 Integer i = 5;int j = i; 这样的过程就是自动拆箱。 我们可以用一句话总结自动装箱/拆箱： 自动装箱过程是通过调用包装类的 valueOf()方法实现的，而自动拆箱过程是通过调用 包装类的 xxxValue()方法实现的（xxx 代表对应的基本数据类型，如 intValue()、 doubleValue()等）。 </p>
 <p>自动装箱与拆箱的功能事实上是编译器来帮的忙，编译器在编译时依据您所编写的语 法，决定是否进行装箱或拆箱动作 </p>
-<h3 id="字符串相关类"><a href="#字符串相关类" class="headerlink" title="字符串相关类"></a>字符串相关类</h3><p>String 类、StringBuilder 类、StringBuffer 类是三个字符串相关类。String 类是的对 象代表不可变的字符序列，StringBuilder 类和 StringBuffer 类代表可变字符序列。 </p>
+<h3 id="字符串相关类"><a href="#字符串相关类" class="headerlink" title="字符串相关类"></a>字符串相关类</h3><p><strong>String类</strong></p>
+<p>String 类、StringBuilder 类、StringBuffer 类是三个字符串相关类。String 类是的对 象代表不可变的字符序列，StringBuilder 类和 StringBuffer 类代表可变字符序列。 </p>
 <p>String类是的对 象代表不可变的字符序列，StringBuilder 类和 StringBuffer 类代表可变字符序列 </p>
 <p>String内部被final修饰，因此是对象内部的成员变量的值无法再改变。 </p>
 <p>StringBuffer 和 StringBuilder 非常类似，均代表可变的字符序列。 这两个类都是抽 象类 AbstractStringBuilder 的子类 </p>

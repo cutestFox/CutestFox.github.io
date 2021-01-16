@@ -608,19 +608,22 @@
 <p>要求输入学生成绩（假设成绩都是整数），如果&gt;=80显示优秀，如果&gt;=70显示良好，如果&gt;=60显示及格，否则显示不及格 </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> score=sc.nextInt();</span><br><span class="line">		<span class="keyword">int</span> key = score / <span class="number">10</span>;</span><br><span class="line">		String res=<span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">switch</span> (key) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">8</span>:	</span><br><span class="line">			res=<span class="string">&quot;优秀&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">			res=<span class="string">&quot;良好&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">			res=<span class="string">&quot;及格&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			res=<span class="string">&quot;不及格&quot;</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">&quot;学生成绩为:&quot;</span>+score+<span class="string">&quot;评级为：&quot;</span>+res);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4><p>循环就是重复做某一件事情。在Java程序中，循环控制即在某一情况下，控制程序重复执行某一条或多条语句，直到遇到终止条件为止</p>
+<p>###循环结构</p>
+<p>循环就是重复做某一件事情。在Java程序中，循环控制即在某一情况下，控制程序重复执行某一条或多条语句，直到遇到终止条件为止</p>
 <p>循环语句也称迭代语句，在Java语言中存在的while、for和do-while循环语句</p>
 <p>循环结构分两大类，一类是当型，一类是直到型。 </p>
 <p> 当型： 当布尔表达式条件为 true 时，反复执行某语句，当布尔表达式的值为 false 时才停 止循环，比如：while 与 for 循环。</p>
 <p>  直到型： 先执行某语句， 再判断布尔表达式，如果为 true，再执行某语句，如此反复，直 到布尔表达式条件为 false 时才停止循环，比如 do-while 循环。 </p>
-<h5 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h5><p>while是Java中最基本的循环语句，满足条件才执行循环体，如果不满足条件则不执行。所以有可能循环体一次都不执行。</p>
+<p>####while循环</p>
+<p>while是Java中最基本的循环语句，满足条件才执行循环体，如果不满足条件则不执行。所以有可能循环体一次都不执行。</p>
 <p>语法：<code>while(条件)&#123;循环体;&#125;</code>当条件成立时反复执行循环体，每执行一次判断一次条件。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test003</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(x&lt;=<span class="number">100</span>) &#123;</span><br><span class="line">			res = res+x;</span><br><span class="line">			x++;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(res);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>需求：计算所有100以内奇数的和</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(k&lt;<span class="number">100</span>)&#123;</span><br><span class="line">            res+=k;</span><br><span class="line">            k=k+<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(res);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do/while循环"></a>do/while循环</h5><p>语法：<code>do&#123;循环体;&#125;while(条件);</code> 先执行循环体，然后进行条件判断，如果条件为true，则执行下次循环；如果条件为false则终止循环。</p>
+<p>####do/while循环</p>
+<p>语法：<code>do&#123;循环体;&#125;while(条件);</code> 先执行循环体，然后进行条件判断，如果条件为true，则执行下次循环；如果条件为false则终止循环。</p>
 <ul>
 <li><p>不同于while循环的点：do/while循环至少执行循环体一次，而while循环有可能一次都不执行</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test006</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">do</span> &#123;</span><br><span class="line">			res +=k++;</span><br><span class="line">		&#125;<span class="keyword">while</span>(k&lt;<span class="number">101</span>);</span><br><span class="line">		System.out.println(res);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -629,7 +632,7 @@
 
 </li>
 </ul>
-<p>###for循环</p>
+<p>####for循环</p>
 <p>语法：<code>for(表达式1；表达式2：表达式3)&#123;循环体;&#125;</code>这里不是逗号</p>
 <ul>
 <li><p>执行表达式1</p>
@@ -665,7 +668,8 @@
 </li>
 </ul>
 <hr>
-<h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><p>在一个循环语句内部再嵌套一个或多个循环，称为嵌套循环。while、do-while 与 for 循 环可以任意嵌套多层。 </p>
+<p>####嵌套循环</p>
+<p>在一个循环语句内部再嵌套一个或多个循环，称为嵌套循环。while、do-while 与 for 循 环可以任意嵌套多层。 </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> text;</span><br><span class="line"><span class="comment">//打印乘法表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test002</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;<span class="number">10</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j =<span class="number">1</span>;j&lt;=i;j++) &#123;</span><br><span class="line">				System.out.print(j+<span class="string">&quot;*&quot;</span>+i+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -679,9 +683,17 @@
 <p>方法可以有参数，也可以没有参数；方法可以有返回值，也可以没有返回值。方法中含有void时，必须要有返回值，没有时，则不需要返回值</p>
 <h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><p>方法的重载是指一个类中可以定义多个方法名相同，但参数不同的方法。 调用时，会 根据不同的参数自动匹配对应的方法 </p>
 <p>重载的方法，实际是完全不同的方法，只是名称相同而已！ </p>
+<p>不是返回值类型不同，返回值类型不同不是方法的重载</p>
+<p>方法的重载是  参数的个数不同、参数的类型不同、参数的顺序不同</p>
 <h3 id="递归调用"><a href="#递归调用" class="headerlink" title="递归调用"></a>递归调用</h3><p>递归是一种常见的解决问题的方法，即把问题逐渐简单化。递归的基本思想就是“自己 调用自己”，一个使用递归技术的方法将会直接或者间接的调用自己 .</p>
 <p>1.斐波那契数列Fibonacci sequence</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> text;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test009</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		System.out.println(<span class="string">&quot;请输入你想知道兔子数的月份：&quot;</span>);</span><br><span class="line">		<span class="keyword">int</span> kk = sc.nextInt();</span><br><span class="line">		System.out.println(Fibonacci(kk));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> month)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (month &gt;= <span class="number">3</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> (Fibonacci(month - <span class="number">1</span>) + Fibonacci(month - <span class="number">2</span>));</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.汉诺塔问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 汉诺塔 </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> k = sc.nextInt();</span><br><span class="line">		System.out.println(han(k));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">han</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(k&gt;<span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> han(k-<span class="number">1</span>)*<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.阶乘问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> 递归;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 阶乘 </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">double</span> a = sc.nextDouble();</span><br><span class="line">		System.out.println(factorial(a));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span>  <span class="title">factorial</span><span class="params">(<span class="keyword">double</span> a)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(a&gt;<span class="number">1</span>) </span><br><span class="line">			<span class="keyword">return</span> a*factorial(a-<span class="number">1</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -745,7 +757,7 @@
 <p>声明格式：</p>
 <p>​        （1.）类型 【】 【】 变量名 </p>
 <p>​        （2.）类型   变量名 【】 【】</p>
-<h4 id="几种排序结构"><a href="#几种排序结构" class="headerlink" title="几种排序结构"></a>几种排序结构</h4><p>#####（1.）直接排序结构</p>
+<h3 id="几种排序结构"><a href="#几种排序结构" class="headerlink" title="几种排序结构"></a>几种排序结构</h3><p>#####（1.）直接排序结构</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package cutestFox01;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">public class Test008 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int[] array &#x3D; &#123;1,4,8,3,69,26,14,36,7,9&#125;;</span><br><span class="line">		for(int i&#x3D;0;i&lt;array.length;i++) &#123;</span><br><span class="line">			for(int j&#x3D; i+1;j&lt;array.length;j++) &#123;	</span><br><span class="line">				if(array[i]&gt;array[j]) &#123;</span><br><span class="line">					int temp &#x3D; array[i];</span><br><span class="line">					 array[i] &#x3D; array[j];</span><br><span class="line">					array[j] &#x3D; temp;	</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(Arrays.toString(array));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -762,7 +774,16 @@
 
 
 
-<h4 id="（4）插入排序"><a href="#（4）插入排序" class="headerlink" title="（4）插入排序"></a>（4）插入排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> 排序结构;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 插入排序 </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] array = &#123; <span class="number">7</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">12</span>, <span class="number">47</span>, <span class="number">58</span>, <span class="number">63</span>, <span class="number">14</span>, <span class="number">25</span> &#125;;</span><br><span class="line">		<span class="keyword">int</span>[] newArray = <span class="keyword">new</span> <span class="keyword">int</span>[array.length];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> tempIndex = i;</span><br><span class="line">			<span class="keyword">while</span> (tempIndex != <span class="number">0</span> &amp;&amp; newArray[tempIndex - <span class="number">1</span>] &gt; array[i]) &#123;</span><br><span class="line">				newArray[tempIndex] = newArray[tempIndex - <span class="number">1</span>];</span><br><span class="line">				tempIndex--;</span><br><span class="line">			&#125;</span><br><span class="line">			newArray[tempIndex] = array[i];</span><br><span class="line">			System.out.println(Arrays.toString(newArray));</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(Arrays.toString(newArray));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>#####（4）插入排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> 排序结构;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 插入排序 </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] array = &#123; <span class="number">7</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">12</span>, <span class="number">47</span>, <span class="number">58</span>, <span class="number">63</span>, <span class="number">14</span>, <span class="number">25</span> &#125;;</span><br><span class="line">		<span class="keyword">int</span>[] newArray = <span class="keyword">new</span> <span class="keyword">int</span>[array.length];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> tempIndex = i;</span><br><span class="line">			<span class="keyword">while</span> (tempIndex != <span class="number">0</span> &amp;&amp; newArray[tempIndex - <span class="number">1</span>] &gt; array[i]) &#123;</span><br><span class="line">				newArray[tempIndex] = newArray[tempIndex - <span class="number">1</span>];</span><br><span class="line">				tempIndex--;</span><br><span class="line">			&#125;</span><br><span class="line">			newArray[tempIndex] = array[i];</span><br><span class="line">			System.out.println(Arrays.toString(newArray));</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(Arrays.toString(newArray));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>（5）希尔排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 希尔排序 </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] arr = &#123;<span class="number">0</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</span><br><span class="line">		shellSort(arr);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line">			System.out.print(arr[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shellSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> gap = arr.length/<span class="number">2</span>;gap&gt;<span class="number">0</span>;gap/=<span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=gap;i&lt;arr.length;i++) &#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=i-gap;j&gt;=<span class="number">0</span>;j-=gap) &#123;</span><br><span class="line">					<span class="keyword">if</span>(arr[j]&gt;arr[j+gap]) &#123;</span><br><span class="line">						temp = arr[j];</span><br><span class="line">						arr[j] = arr[j+gap];</span><br><span class="line">						arr[j+gap] = temp;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（6）快速排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 快速排序 </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> arr[]= &#123;<span class="number">12</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">12</span>,<span class="number">8</span>&#125;;</span><br><span class="line">		quickSort(arr, <span class="number">0</span>, arr.length-<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line">			System.out.print(arr[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[]arr,<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//进行判断，如果左边索引比右边索引 大，是不合法的，直接return结束这个方法</span></span><br><span class="line">		<span class="keyword">if</span>(left&gt;right)</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		<span class="comment">//定义变量保存基准数</span></span><br><span class="line">		<span class="keyword">int</span> base = arr[left];</span><br><span class="line">		<span class="comment">//定义变量i指向最左边</span></span><br><span class="line">		<span class="keyword">int</span> i = left;</span><br><span class="line">		<span class="comment">//定义变量j指向最右边</span></span><br><span class="line">		<span class="keyword">int</span> j = right;</span><br><span class="line">		<span class="comment">//当i和j不相遇时。在循环中检索</span></span><br><span class="line">		<span class="keyword">while</span>(i!=j) &#123;</span><br><span class="line">			<span class="comment">//由j从右往左检索比基准数小的，如果检索到比基准数小的就停下</span></span><br><span class="line">			<span class="comment">//检索到比基准数大的或者相等的，就继续检索</span></span><br><span class="line">			<span class="keyword">while</span>(arr[j]&gt;=base&amp;&amp;i&lt;j) &#123;</span><br><span class="line">				j--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//i从左往右</span></span><br><span class="line">			<span class="keyword">while</span>(arr[i]&lt;=base&amp;&amp;i&lt;j) &#123;</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//代码走到这里，i和j都停下，交换</span></span><br><span class="line">			<span class="keyword">int</span> temp =arr[i];</span><br><span class="line">			arr[i] = arr[j];</span><br><span class="line">			arr[j] = temp;</span><br><span class="line">			</span><br><span class="line">			<span class="comment">//如果上面while循环的条件不成立，会跳出这个循环，往下执行</span></span><br><span class="line">			<span class="comment">//如果这个条件不成立说明i和j就相遇了</span></span><br><span class="line">			<span class="comment">//交换基准数和i和j相遇位置的数</span></span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		arr[left] = arr[i];</span><br><span class="line">		arr[i] = base;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//交换完成后，基准数归位，左边数字都比他小，右边数字都比他大</span></span><br><span class="line">		<span class="comment">//排左边</span></span><br><span class="line">		quickSort(arr, left, i-<span class="number">1</span>);</span><br><span class="line">		<span class="comment">//排右边</span></span><br><span class="line">		quickSort(arr, i+<span class="number">1</span>, right);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -886,86 +907,263 @@
 <p> int nextInt()该方法的作用是生成一个随机的int值，该值介于int的区间，也就是2e9之间</p>
 <p><strong>int nextInt(int n)方法的作用是生成一个随机的int值，该值介于[0,n)的区间，也就是0到n之间的随机int值，包含0而不包含n</strong></p>
 <p>​    <strong>需要生成一个4位整数:1000+r.nextInt(9000)</strong></p>
-<h2 id="面相对象篇"><a href="#面相对象篇" class="headerlink" title="面相对象篇"></a>面相对象篇</h2><p>###封装</p>
-<p>​    封装是指将现实世界中存在的某个客体的属性与行为绑定在一起，并放置在一个逻辑单元内。</p>
-<p>封装是一种将代码与其处理的数据结合起来，而<strong>不被外界干扰和滥用的程序设计机制</strong>。该逻辑单元负责将所描述的属性隐藏起来，外界对客体内部属性的所有访问只能通过提供的用户接口实现。</p>
+<h2 id="面相对象篇"><a href="#面相对象篇" class="headerlink" title="面相对象篇"></a>面相对象篇</h2><p>####对象</p>
+<p>对象是要进行研究的任何事物，从简单的整数到复杂的飞机等均可看作对象，它不仅能表示具体的事物，还能表 示抽象的规则、计划或事件。<br>对象是一个客观存在的、唯一的实体，是一个类的动态实例，拥有自己的标识、数据与行为。</p>
+<p>####对象的状态和行为</p>
+<ul>
+<li><p>象具有状态，一个对象用数据值来描述它的状态 </p>
+</li>
+<li><p>对象还有操作，用于改变对象的状态，对象及其操作就是对象的行为</p>
+</li>
+<li><p>对象实现了数据和操作的结合，使数据和操作封装于对象的统一体中</p>
+</li>
+</ul>
+<p>####类</p>
+<ul>
+<li>具有相同特性（数据元素）和行为（功能）的</li>
+<li>对象的抽象就是类 对象的抽象是类，类的具体化就是对象，也可以说类的实例是对象 </li>
+<li>类实际上就是一种数据类型 </li>
+</ul>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a><strong>封装</strong></h3><p>封装是指将现实世界中存在的某个客体的属性与行为绑定在一起，并放置在一个逻辑单元内。</p>
+<p>封装是一种将代码与其处理的数据结合起来，而不被外界干扰和滥用的程序设计机制。该逻辑单元负责将所描述的属性隐藏起来，外界对客体内部属性的所有访问只能通过提供的用户接口实现。</p>
 <p>既可以实现对客体属性的保护作用，又可以提高软件系统的可维护性</p>
 <p>只要用户接口不改变，任何封装体内部的改变都不会对软件系统的其他部分造成影响</p>
-<p><strong>封装隐藏实现细节，并对外提供了公共的访问方式</strong></p>
+<p>封装隐藏实现细节，并对外提供了公共的访问方式</p>
 <p>调用对象时是无需了解其中的细节，只需要知道调用方法接口、方法或者类都是一个封装体。Java的基本封装单元就是类class，组成类的代码或数据称为类的成员。</p>
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承就是在已经存在的类的基础上，再进行扩展，从而产生新的类，支持了层次结构分类的概念</p>
-<p><strong>abstract</strong>：abstract 可以用来修饰一个方法，当使用abstract修饰方法的时候，表示这个方法是抽象的，不能具有方法体抽象方法只能放在抽象类或接口中，</p>
+<p><strong>访问控制</strong></p>
+<p>public到处可见 private当前类内可见 默认同包可见 protected同包和子类中可见<br><img src="https://img-blog.csdnimg.cn/20201121204427513.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODc0MTA3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a><strong>继承</strong></h3><p>继承就是在已经存在的类的基础上，再进行扩展，从而产生新的类，支持了层次结构分类的概念</p>
+<p>abstract：abstract 可以用来修饰一个方法，当使用abstract修饰方法的时候，表示这个方法是抽象的，不能具有方法体抽象方法只能放在抽象类或接口中，</p>
 <p>抽象类只能被抽象继承或者在继承的时候将父类的抽象方法具体化</p>
 <p>（1）抽象类不能被实例化</p>
 <p>（2）包含抽象方法的类，必须标识 abstract</p>
 <p>当类是抽象的时候，需要实现对象的时候，可以使用匿名类也就是说在调用的时候（将父类中的抽象方法重写成具体的）</p>
 <p>匿名类是一次性的，只能使用一次，也就是说，即使即使创建两个匿名类类容一模一样，也是不同的两个对象</p>
-<p>里氏替换原则：可替换性是面向对象编程中的一个原则，指的是在计算机程序中，如果S是T的一个子类型，那么T类型的对象可以被S类型的对象替换（即，T类型的对象可以被S子类型的任何对象替换），而不改变程序的任何原定的属性（正确性、执行的任务等） </p>
-<p><strong>this和super</strong></p>
-<p>this用于指代当前对象</p>
+<h4 id="继承的特点"><a href="#继承的特点" class="headerlink" title="继承的特点"></a>继承的特点</h4><ul>
+<li><p>Java中不支持多重继承，Java中要求任何的子类只能有一个直系的双亲类</p>
+</li>
+<li><p>可以在子类中进行覆盖定义父类中的成员方法和成员属性</p>
+</li>
+</ul>
+<h4 id="继承的优点"><a href="#继承的优点" class="headerlink" title="继承的优点"></a>继承的优点</h4><ul>
+<li>将所有子类的共同属性放入父类，实现代码共享，避免重复，提高开发效率 </li>
+<li>可以使得修改扩展，继承而来的实现比较简单 </li>
+</ul>
+<h4 id="继承的缺陷"><a href="#继承的缺陷" class="headerlink" title="继承的缺陷"></a>继承的缺陷</h4><ul>
+<li>父类变，子类就必须变 </li>
+<li>继承破坏了封装，对于父类而言，它的实现细节对与子类来说都是透明的 </li>
+<li>继承是一种强耦合关</li>
+</ul>
+<h5 id="java-lang-Object"><a href="#java-lang-Object" class="headerlink" title="java.lang.Object"></a>java.lang.Object</h5><p>所有Java类都直接或者间接的继承自Object类，那么Object中的方法也是其他所有类都拥有的 </p>
+<h5 id="什么是包"><a href="#什么是包" class="headerlink" title="什么是包"></a>什么是包</h5><ul>
+<li>包是类的组织方式，提供名空间和访问控制 </li>
+<li>类似于文件系统的组织</li>
+</ul>
+<h5 id="声明包中的类package"><a href="#声明包中的类package" class="headerlink" title="声明包中的类package"></a>声明包中的类package</h5><p>语法：package 包名称;</p>
+<ul>
+<li><p>声明包要求是源代码文件的第一个语句 </p>
+</li>
+<li><p>程序中多只能有一条package语句,没有包定义的源代码文件成为默认包中的一部分 : </p>
+</li>
+<li><p>程序中如果有package语句,该语句必须是第一条语句（前面只能有注释或空行）</p>
+<p>####包的作用</p>
+<ul>
+<li><p>包能将相关的源代码文件组织在一起 </p>
+</li>
+<li><p>包减少了名称冲突带来的问题 </p>
+</li>
+<li><p>可以使用package指明源文件中的类属于哪个具体的包</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>#####  
+
+#### 包的使用
+
+如果其他人想使用包中类，则需要使用全名 
+
+为了简化书写，Java提供了import语句： import  package_name.*; 
+
+引入包中的某一个类：import java.util.ArrayList; </code></pre>
+<h5 id="Java中常用的包"><a href="#Java中常用的包" class="headerlink" title="Java中常用的包"></a>Java中常用的包</h5><ul>
+<li>java.applet用于提供Applet开发的支持,目前已经被ash所替代，很少使用，只有在某些地图系统中还有使用 </li>
+<li>java.awt和javax.swing用于单机软件或者c/s应用中的界面开发</li>
+<li> java.io用于输入、输出操作 </li>
+<li>java.lang语言包,默认自动加载的包</li>
+<li>java.net用于网络编程</li>
+<li> java.util工具包，是Java提供的一些工具类</li>
+</ul>
+<p><strong>里氏替换原则</strong>：可替换性是面向对象编程中的一个原则，指的是在计算机程序中，如果S是T的一个子类型，那么T类型的对象可以被S类型的对象替换（即，T类型的对象可以被S子类型的任何对象替换），而不改变程序的任何原定的属性（正确性、执行的任务等）</p>
+<p><strong>私有属性是否可被继承-</strong>–两种答案 这个问题目前没有唯一的标准答案，网络上可以看到2种答案，分别是可继承和不可继承<br>（1）可以被继承，但是由于private的限制，所以在子类中不能直接访问</p>
+<p>（2） 不可以被继承。当构建子类对象时，首先创建父类对象，然后再创建子类对象，子类对象中包裹父类对象</p>
+<p>子类除了拥有父类的属性和方法（拥有父类的所有成员，但是注意构造器和析构器不是成员），也可以创建自己的 特性 </p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a><strong>多态</strong></h3><p>多态性是发送消息给某个对象，让该对象自行决定响应何种行为。通过将子类对象引用赋值给超类对象引用变量来 实现动态方法调用</p>
+<p>多态性通过允许同一界面指定一类动作减少了程序的复杂度，编译器工作就是选择适用于各个情况的特定动作，而 程序员则无须手动进行选择，使用者仅仅是记得以及利用这个统一的界面</p>
+<p>多态可以用三个定义和两个方法来总结。三个定义分别是父类定义子类构建、接口定义实现类构建和抽象类定义实 体类构建，而两个方法分别是方法重载和方法重写。<br>多态分为两种：</p>
+<ul>
+<li>编译时多态：方法的重载 </li>
+<li>运行时多态：JAVA运行时系统根据调用该方法的实例的类型来决定选择调用哪个方法则被称为运行时多态 </li>
+</ul>
+<p>1.重载时多态</p>
+<p>2.继承时多态</p>
+<h4 id="对象的多态性"><a href="#对象的多态性" class="headerlink" title="对象的多态性"></a>对象的多态性</h4><p>继承表示的是is a的语义</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 汽车 <span class="keyword">extends</span> 车库</span>&#123;&#125;  <span class="comment">//错误的 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 学生 <span class="keyword">extends</span> 人</span>&#123;&#125;  <span class="comment">//正确的，因为任何一个学生都是人</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>一个对象x有两种形态，猫这类事物即具有猫的形态，又具有着动物的形态，这就是对象的多态性。简单说就是一 个对象对应着不同类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object x=<span class="keyword">new</span> Student(); </span><br><span class="line">Person x=<span class="keyword">new</span> Student(); </span><br><span class="line">Student x=<span class="keyword">new</span> Student();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h5 id="多态在代码中的体现"><a href="#多态在代码中的体现" class="headerlink" title="多态在代码中的体现"></a>多态在代码中的体现</h5><ul>
+<li>父类或者接口的引用指向其子类的对象。例如：动物 x=new 猫()</li>
+<li>静态方法中不能直接访问非静态成员，但是普通方法允许直接调用其他成员方法，当然也允许直接调用静态 方法</li>
+<li>对象多态性可以使程序有良好的扩展，并可以对所有类的对象进行通用处理</li>
+<li>多态引用时，构造子类对象时的构造方法的调用顺序 <ul>
+<li>​    父类 bi=new 子类();   bi可以直接调用父类中声明的方法，但是具体执行的方法取决于new 的是谁。如果需要调用子类中的特殊方法，则必须先进行强壮类型转换</li>
+<li>先调用超类的构造方法，多重超类首先调用远超类的方法 </li>
+<li>然后再执行当前子类的构造方法</li>
+</ul>
+</li>
+</ul>
+<h5 id="类间多态和类内多态"><a href="#类间多态和类内多态" class="headerlink" title="类间多态和类内多态"></a>类间多态和类内多态</h5><p>多态是同一个行为具有多个不同表现形式或形态的能力。多态就是同一个接口，使用不同的实例而执行不同操作 </p>
+<h5 id="类间多态性"><a href="#类间多态性" class="headerlink" title="类间多态性"></a>类间多态性</h5><ul>
+<li><p> 父子类之间的一种多态型，例如：动物 x = new 猫()</p>
+</li>
+<li><p>方法调用中的限制: </p>
+</li>
+</ul>
+<p>针对一个类对象有两种类型，一种称之为编译期类型，编译时系统识别对象的类型，”动物 x = new 猫()”在编 译时，系统识别x是动物类别的，所以只能调用动物类定义的方法，而不能调用猫中特殊的方法。另外一种称 之为运行时类型，也就是当程序运行系统识别的类型，new谁就是谁</p>
+<ul>
+<li> 覆盖的方法一定不能是private的 </li>
+</ul>
+<h5 id="类内多态性"><a href="#类内多态性" class="headerlink" title="类内多态性"></a>类内多态性</h5><p>  在一个类对象上调用相同名称的方法，但是当参数不同时执行不同的动作</p>
+<h3 id="方法的重写和重载"><a href="#方法的重写和重载" class="headerlink" title="方法的重写和重载"></a>方法的重写和重载</h3><h5 id="方法的重写-覆盖"><a href="#方法的重写-覆盖" class="headerlink" title="方法的重写(覆盖)"></a>方法的重写(覆盖)</h5><p>要求：方法的名称一致<br>方法的重写(覆盖)一定发生在父子类之间</p>
+<ul>
+<li>执行规则：new谁运行谁的方法，和声明的类型无关，由具体创建对象的类型决定 </li>
+<li>方法的覆盖定义要求方法名称一致</li>
+<li>子类中方法范围要求大于等于父类中的方法范围,不允许private 返回类型一致,子类方法可以小于等于父类 类型，例如父类Number，子类Integer 参数类型一致 </li>
+<li>方法的参数一致(个数、类型、顺序)，和参数名称无关</li>
+<li>返回数据类型一致【面试】(因为如果返回类型不一致，则无法进行语法检查,例如父类返回Double，而子类返 回Integer,调用处语法检查是按照Double进行检查还是按Integer检查？允许父类中返回的是父类型，而子类 中返回子类型，例如父类中返回的是Number类型，而子类中返回的是Integer)</li>
+</ul>
+<h5 id="注意！！！！"><a href="#注意！！！！" class="headerlink" title="注意！！！！"></a>注意！！！！</h5><p><strong>静态方法覆盖和调用::用谁声明则调用谁的静态方法</strong></p>
+<h5 id="方法的重载-1"><a href="#方法的重载-1" class="headerlink" title="方法的重载"></a>方法的重载</h5><p>方法的名称相同，参数不同，和返回值类型无关。可以在一个类内或者父子类之间<br>调用规则：类型佳匹配原则</p>
+<p><strong>要求：方法名称相同并且参数不同。参数不同有3种情况：参数个数不同、参数类型不同、参数顺序不同 和参数名称无关</strong> </p>
+<p>和返回类型无关</p>
+<p>​        为什么返回类型不同判断不同的方法？【面试】 例如调用方法时不需要处理返回值pp(10),容易造成混淆</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">pp</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pp</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;&#125; 一个方法有返回值，调用处实际上可以不接收。假设系统可以按照返回类型将这两个方法识别为不同方 法，则调用pp(<span class="number">10</span>)就没办法判断到底执行哪个</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>和范围无关</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pp</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">pp</span><span class="params">()</span></span>&#123;&#125;<span class="comment">//语法报错</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>和方法抛出的异常无关 </p>
+<p>方法的重载可以出现父子类之间，也可以是在一个类内。但是方法的覆盖一定是父子类之间，不能在一个类 内实现方法的覆盖 </p>
+<h4 id="多态的优点"><a href="#多态的优点" class="headerlink" title="多态的优点"></a>多态的优点</h4><ul>
+<li>消除类型之间的耦合关系 </li>
+<li>可替换性、可扩充性 </li>
+<li>接口性、灵活性、简化性</li>
+</ul>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a><strong>关键字</strong></h3><h4 id="final：意思是终的、不可变的"><a href="#final：意思是终的、不可变的" class="headerlink" title="final：意思是终的、不可变的"></a><strong>final</strong>：意思是终的、不可变的</h4><p>final可以修饰方法、属性、类型，在修饰方法的时候父类的方法只能被子类调用而不可以重写，修饰属性的时候需要赋值，或者在构造方法中对final所修饰的属性进行赋值，因为父类中的构造方法一定会执行的，所以可以在构造方法中对final修饰的属性赋值，一旦赋值则不可以改变。final修饰类的时候不允许被继承，因为final意为最终的最后的不可变的，而继承是extends是可扩展的可延伸的，所以说在final修饰的类中不允许被继承，他类中的属性是不可变的！！！！</p>
+<p> 属性上可以声明的同时直接赋值或者在构造器中赋值</p>
+<p>final临时变量，可以声明的同时赋值或者在第一次使用之前进行赋值</p>
+<p>注意：final类型的变量一旦赋值则不允许修改，但是如果是复杂类型是不允许修改地址，但是可以修改属性</p>
+<p>final方法表示这个方法不允许在子类中重新定义（覆盖\重写）</p>
+<p>final类表示这个类不允许被继承 </p>
+<h4 id="this和super"><a href="#this和super" class="headerlink" title="this和super"></a><strong>this和super</strong></h4><p>this用于指代当前对象</p>
 <p>super用于指代当前对象的父类中定义的成员，super是否能够访问取决于范围限定词</p>
 <p>1、从语义的角度上说，this用于指代当前对象；super用于指代父类对象</p>
 <p>1、this()表示调用另外一个构造器,super()表示调用父类中的某个构造器，()中的参数决定调用的是哪个构造器</p>
 <p>2、this.成员属性用于表示当前对象的某个成员，一般用于局部变量和属性名称一致的场景下。super.成员属性用于表示父类中定义的某个属性，一般用于子类中覆盖定义了某个父类属性的场景下。</p>
 <p>3、this.成员方法()用于表示当前对象的某个成员方法；super.成员方法()用于表示当前类的父类中定义的某个成员方法，一般用于覆盖定义时【就近原则】。</p>
 <p>4、在static方法中不允许使用this/super之类关键字</p>
-<p>**interface(**接口）：java类中不允许多继承只允许单继承，但是在接口中可以多继承，类在实现接口的时候也可以实现多个接口，接口中的方法默认是抽象的，所以在实现接口时需要将抽象方法具体化，如果类中的两个接口中的抽象方法，方法名、参数、返回值类型是一样的，在类中只需要实现一种方法即可。</p>
-<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>1.重载时多态</p>
-<p>2.继承时多态</p>
-<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><h5 id="final"><a href="#final" class="headerlink" title="final"></a>final</h5><p>final可以修饰方法、属性、类型，在修饰方法的时候父类的方法只能被子类调用而不可以重写，修饰属性的时候需要赋值，或者在构造方法中对final所修饰的属性进行赋值，因为父类中的构造方法一定会执行的，所以可以在构造方法中对final修饰的属性赋值，一旦赋值则不可以改变。final修饰类的时候不允许被继承，因为final意为最终的最后的不可变的，而继承是extends是可扩展的可延伸的，所以说在final修饰的类中不允许被继承，他类中的属性是不可变的！！！！</p>
-<h5 id="static"><a href="#static" class="headerlink" title="static"></a>static</h5><p>被static所修饰的含有静态属性，static可以修饰方法，可以修饰内部类、语句块、属性</p>
+<p>interface(接口）：java类中不允许多继承只允许单继承，但是在接口中可以多继承，类在实现接口的时候也可以实现多个接口，接口中的方法默认是抽象的，所以在实现接口时需要将抽象方法具体化，如果类中的两个接口中的抽象方法，方法名、参数、返回值类型是一样的，在类中只需要实现一种方法即可。</p>
+<h4 id="static"><a href="#static" class="headerlink" title="static"></a><strong>static</strong></h4><p>​        用于修饰成员，包括成员属性【类属性或者静态属性】、成员方法【类方法或者静态方法】</p>
+<ul>
+<li>随着类加载，随着类消失 </li>
+<li>优先于对象，用类名直接访问</li>
+</ul>
 <p>被static修饰的，可以不用对象调用 ，随着类的加载自动执行，优先于对象，可以用类名直接调出</p>
 <p>static属性是当前类的所有对象所共有的共同属性(只有一个，而普通属性各个对象都有自己的，相互隔离)，任何一个当前类对象修改这个属性，所有其他类对象的这个属性都会受影响</p>
-<p>​    <strong>执行顺序：  静态属性—属性—构造器</strong></p>
-<p><strong>static执行时机：</strong></p>
-<p>​    <strong>静态属性的处理在类加载之后自动执行，和是否需要构造对象无关，如果不new，则不会处理非静态属性和指定构造器方法</strong> </p>
-<p>静态方法执行时很有可能并没有构建对象，所以在<strong>静态方法中不允许使用this/super</strong>之类用于指定对象的关键字</p>
-<p><strong>规则：静态方法只能直接访问静态成员，不能直接访问非静态成员</strong></p>
+<p>执行顺序： 静态属性—属性—构造器</p>
+<p>访问的方式<br>可以使用“类名.静态属性名”或者“对象名.静态属性名”的方式进行访问。【范围限制】 </p>
+<h5 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h5><ul>
+<li>因为可以直接使用”类名.方法名”的形式直接调用静态方法，静态方法执行时很有可能并没有构建对象，所以 在静态方法中不允许使用this/super之类用于指定对象的关键字</li>
+<li>当然在静态方法中允许创建对象，并调用对象方法 </li>
+<li>静态方法只能直接访问静态成员，不能直接访问非静态成员 </li>
+</ul>
+<h5 id="静态块"><a href="#静态块" class="headerlink" title="静态块"></a>静态块</h5><ul>
+<li>类在执行时需要通过一个叫作类加载器的组件将程序加载到内存中，类在运行时一般不会发生变化，所以类 不会频繁加载，在整个运行过程中只加载一次，而且常驻内存 </li>
+<li>静态块在类加载完毕后自动执行，而且只执行一次</li>
+</ul>
+<h5 id="非静态块"><a href="#非静态块" class="headerlink" title="非静态块"></a>非静态块</h5><ul>
+<li>非静态块在类内且在所有的方法之外，非静态块并不会在类加载后自动执行，而是在构建当前对象时自动执行。 new一次则会执行一次，执行时机在构造器之前执行</li>
+</ul>
+<h5 id="考试点"><a href="#考试点" class="headerlink" title="考试点"></a>考试点</h5><ul>
+<li>当类加载完毕会自动优先处理static属性和static块，这两个优先级是相同的，所以谁在前先处理谁</li>
+<li> new对象时，处理非静态属性和非静态块，这两个优先级是相同的，所以谁在前先处理谁 </li>
+<li>最后执行构造器</li>
+</ul>
+<h5 id="使用注意事项"><a href="#使用注意事项" class="headerlink" title="使用注意事项"></a>使用注意事项</h5><ul>
+<li>静态方法只能访问静态成员，静态有访问局限性</li>
+<li> 静态方法中不能有this super关键字 </li>
+<li>主函数是静态的</li>
+</ul>
+<h5 id="什么时候使用静态"><a href="#什么时候使用静态" class="headerlink" title="什么时候使用静态"></a>什么时候使用静态</h5><ul>
+<li>当成员变量的数据各个对象都相同时，可以用static修饰的，让多个对象共享 </li>
+<li>方法如果访问了特有数据（非静态成员变量），该函数是非静态的。方法如果没有访问特有数据，那么该方 法就是静态修饰 </li>
+<li>如果类中的功能都是静态的，那么该类创建对象是没有意义的，所以构造方法需要私有化 </li>
+</ul>
+<h5 id="static执行时机"><a href="#static执行时机" class="headerlink" title="static执行时机"></a>static执行时机</h5><p>静态属性的处理在类加载之后自动执行，和是否需要构造对象无关，如果不new，则不会处理非静态属性和指定构造器方法</p>
+<p>静态方法执行时很有可能并没有构建对象，所以在静态方法中不允许使用this/super之类用于指定对象的关键字</p>
+<p>规则：静态方法只能直接访问静态成员，不能直接访问非静态成员</p>
 <p>也就是说被static修饰的方法不可以调用非静态的方法，而非静态方法可以调用静态方法</p>
 <p>定义A1类继承于E1类</p>
 <p>由于E1类是A1类的父类，所以先加载E1类，加载完毕处理静态块和静态属性；然后加载A1类, 加载完毕处理静态块和静态属性。</p>
 <p>new A1()一定是先构建父类对象，然后在构建A1类对象。所以先处理E1类中的非静态代码块和非静态属性，然后执行E1类的构造器；继续处理子类中的非静态代码块和非静态属性，然后执行A1类中的构造器</p>
-<p><strong>访问控制</strong></p>
-<p><strong>public</strong>到处可见   <strong>private</strong>当前类内可见  默认同包可见   <strong>protected</strong>同包和子类中可见</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>类内</th>
-<th>同包</th>
-<th>子类</th>
-<th>到处</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>private</td>
-<td>T</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>默认</td>
-<td>T</td>
-<td>T</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>protected</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td></td>
-</tr>
-<tr>
-<td>public</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-</tr>
-</tbody></table>
+<p>静态块没有覆盖定义的概念，如果父子类中都定义了静态块，一定是先执行父类中的静态块，然后运行子类中的静 态块</p>
+<p>(1)加载顺序为先父后子—先执行父类中定义的静态属性和静态块 </p>
+<p>(2)然后执行初始化操作—先处理父类中的成员属性和非静态块，再执行父类构造器；后执行子类的定义内容 </p>
+<h5 id="静态导入"><a href="#静态导入" class="headerlink" title="静态导入"></a>静态导入</h5><p>在一个类中反复使用到某个类中的静态方法，如果使用静态导入则在当前类中不需要再写类名称</p>
+<p>在JDK5当中提供了导入静态方法的import语句。</p>
+<ul>
+<li> 语法：import static java.lang.Math.*; - 导入Math类中的所有静态方法 </li>
+<li>注意要求使用JDK1.5+版本，否则编译不通过</li>
+</ul>
+<h5 id="方法中的可变长个数的参数"><a href="#方法中的可变长个数的参数" class="headerlink" title="方法中的可变长个数的参数"></a>方法中的可变长个数的参数</h5><ul>
+<li><p>语法：数据类型… 变量名。－必须作为最后一个参数出现</p>
+</li>
+<li><p>不确定个数的参数必须是方法声明时后一个参数，一个方法中只允许一个不确定个数的参数</p>
+</li>
+<li><p>具体处理过程中实际上是按照数组的方式进行处理，而且数组不会为null</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pp</span><span class="params">(<span class="keyword">int</span>... k1)</span></span>&#123;    </span><br><span class="line"><span class="keyword">if</span>(k1.length&gt;<span class="number">0</span>)&#123;        </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k1.length;i++)            System.out.println(k1[i]);  </span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ul>
+<h5 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h5><p>意图：保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br>主要解决：一个全局使用的类频繁地创建与销毁。<br>何时使用：当您想控制实例数目，节省系统资源的时候。</p>
+<p>单例模式有多种写法，常见的是懒汉模式和饿汉模式 饿汉单例模式</p>
+<h5 id="饿汉单例模式"><a href="#饿汉单例模式" class="headerlink" title="饿汉单例模式"></a>饿汉单例模式</h5><p>优点：没有加锁，执行效率会提高<br>缺点：类加载时就初始化，浪费内存<br>编程实现：<br>私有构造器</p>
+<p>静态的私有属性 </p>
+<p>公共的静态方法 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox12;</span><br><span class="line"><span class="comment">////饿汉模式</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">	<span class="comment">//私有构造能够保证在类外不创建对象</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//保证这个实例只有一个，而且长期持有这个对象</span></span><br><span class="line">	<span class="comment">//直接创建对象.私有构造器只能在当前类中进行调用</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Singleton intance = <span class="keyword">new</span> Singleton();</span><br><span class="line">	<span class="comment">//提供统一的访问点</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> intance;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>懒汉单例模式<br>懒汉式：主要是针对饿汉式中不管是否需要使用对象都先创建对象所引起的内存浪费<br>优点：由于采用栏延迟处理的方式，所以比较节约内存<br>缺点：在多线程不能正常工作 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cutestFox12;</span><br><span class="line"><span class="comment">//懒汉模式</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single2</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 私有构造器保证不能随意创建Single2对象</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 静态属性独一无二，保证长期持有</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single2 instance;</span><br><span class="line">	<span class="comment">// 全局访问点</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single2 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (instance == <span class="keyword">null</span>)</span><br><span class="line">			instance = <span class="keyword">new</span> Single2();</span><br><span class="line">		<span class="keyword">return</span> instance;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 
             </div>
             <hr/>
